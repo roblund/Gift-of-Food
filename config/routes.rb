@@ -5,6 +5,8 @@ Giftoffood::Application.routes.draw do
   resource :volunteer do
   end
 
+  match 'admin' => 'admin#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
