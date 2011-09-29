@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>The Gift of Food</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag 'screen', :media => 'screen' %>
+  <%= stylesheet_link_tag 'print', :media => 'print' %>
+  <!--[if IE]>
+    <%= stylesheet_link_tag 'ie' %>
+  <![endif] -->
+  
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
