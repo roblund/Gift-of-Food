@@ -1,4 +1,4 @@
 class Neighborhood < ActiveRecord::Base
-  :belongs_to :volunteer
+  belongs_to :volunteer
   
 end
