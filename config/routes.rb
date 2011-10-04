@@ -2,7 +2,8 @@ Giftoffood::Application.routes.draw do
 
   root :to => 'home#index'
 
-  resource :volunteer, {:only => [:new,:create],:path_names => {:new => "signup"}}
+  resource :volunteers, :only => [:create] do
+  end
 
   scope 'admin' do
     resources :volunteers
