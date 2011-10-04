@@ -2,10 +2,12 @@ Giftoffood::Application.routes.draw do
 
   root :to => 'home#index'
 
-  resource :volunteer do
+  resource :volunteers, :only => [:create] do
   end
 
-  match 'admin' => 'admin#index'
+  scope 'admin' do
+    resources :volunteers
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
