@@ -1,3 +1,30 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+    font-weight:bold;
+    border-top:1px solid #9AA3A0;
+    padding:5px 0;
+    margin:0;
+}
+ul {
+    margin:0;
+}
+ul li {
+    margin-bottom:10px;
+}
+#event_info {
+    list-style:none;
+    margin:10px 0 0 0;
+    padding:5px;
+}
+#event_info li {
+    font-size:1.3em;
+}
+#event_info li span {
+    margin-right:10px;
+    font-size:1.5em;
+    font-weight:bold;
+    display:inline-block;
+}

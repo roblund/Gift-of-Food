@@ -1,0 +1,38 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+
+@mixin box_shadow($offset, $size) {
+    -moz-box-shadow:$offset 0 $size #222;
+    -webkit-box-shadow: $offset 0 $size #222;
+    box-shadow: $offset 0 $size #222;
+}
+body {
+    background:url(bg.gif);
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:12pt;
+}
+.padding {
+    background:#ffffff;
+    margin:0 auto;
+    padding:20px 0;
+    width:990px;
+    border-left:2px solid #787878;
+    border-right:2px solid #787878;
+    @include box_shadow(5px, 3px);
+}
+
+/* Float Clearing - for browsers that support :after*/
+.group:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+/* for IE7 */
+*:first-child+html .group{ min-height:1px; }
