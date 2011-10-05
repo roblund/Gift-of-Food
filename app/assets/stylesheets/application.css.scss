@@ -7,9 +7,9 @@
 */
 
 @mixin box_shadow($offset, $size) {
-    -moz-box-shadow:$offset 0 $size #222;
-    -webkit-box-shadow: $offset 0 $size #222;
-    box-shadow: $offset 0 $size #222;
+    -moz-box-shadow:$offset $offset $size #222;
+    -webkit-box-shadow: $offset $offset $size #222;
+    box-shadow: $offset $offset $size #222;
 }
 body {
     background:url(bg.gif);
@@ -18,11 +18,10 @@ body {
 }
 .padding {
     background:#ffffff;
-    margin:0 auto;
+    margin:20px auto;
     padding:20px 0;
     width:990px;
-    border-left:2px solid #787878;
-    border-right:2px solid #787878;
+    border:2px solid #787878;
     @include box_shadow(5px, 3px);
 }
 
