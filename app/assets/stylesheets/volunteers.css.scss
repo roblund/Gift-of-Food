@@ -1,3 +1,17 @@
 // Place all the styles related to the volunteers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.new_volunteer {
+    margin-bottom:10px;
+}
+.new_volunteer label {
+    display:inline-block;
+    width:150px;
+}
+.new_volunteer .mobile_check label {
+    margin-left:10px;
+    width:auto;
+}
+.new_volunteer input[type="submit"] {
+    margin:10px 0;
+}
