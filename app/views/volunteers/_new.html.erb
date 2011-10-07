@@ -1,10 +1,22 @@
 <%=form_for(@volunteer) do  |v| %>
-  <div><%=v.label :first_name %><%=v.text_field :first_name %></div>
-  <div><%=v.label :last_name %><%=v.text_field :last_name %></div>
-  <div><%=v.label :email %><%=v.email_field :email %></div>
-  <div><%=v.label :telephone %><%=v.telephone_field :phone %><span class="mobile_check"><%=v.label :is_mobile,"Mobile?" %><%=v.check_box :is_mobile %></span></div>
-  <div><%=v.label :neighborhood_id %><%=v.select :neighborhood_id,Neighborhood.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
-  <div><%=v.label :is_team_lead,"Team Lead?" %><%=v.check_box :is_team_lead %></div>
-  <div><%=v.label :zip %><%=v.number_field :zip %></div>
-  <div><%=v.submit "Volunteer" %></div>
+  <div class="span-12">
+    <div><%=v.label :first_name, "First Name" %><%=v.text_field :first_name %></div>
+    <div><%=v.label :last_name, "Last Name" %><%=v.text_field :last_name %></div>
+    <div><%=v.label :email %><%=v.email_field :email %></div>
+    <div><%=v.label :telephone, "Phone" %><%=v.telephone_field :phone %></div>
+    <div class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
+    <div><%=v.label :zip %><%=v.number_field :zip %></div>
+  </div>
+
+  <div class="span-12 last">
+    <div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead, "I would like to be a Team Lead" %></div>
+    <div class="neighborhood_selector">
+      <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
+      <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
+    </div>
+  </div>
+
+  <div class="prepend-9 span-6 append-9">
+    <div><%=v.submit "Volunteer!" %></div>
+  </div>
 <% end %>

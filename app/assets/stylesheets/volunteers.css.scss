@@ -3,15 +3,54 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .new_volunteer {
     margin-bottom:10px;
-}
-.new_volunteer label {
-    display:inline-block;
-    width:150px;
-}
-.new_volunteer .mobile_check label {
-    margin-left:10px;
-    width:auto;
-}
-.new_volunteer input[type="submit"] {
-    margin:10px 0;
+    
+    label {
+        display:inline-block;
+        width:100px;
+        padding:0;
+        margin:0;
+    }
+    input,
+    select {
+        margin:0 0 10px 0;
+        padding:0;
+        border:1px solid #cccccc;
+    }
+    .mobile_check input {
+        margin-left:100px;
+    }
+    .mobile_check label,
+    .team_lead_check label,
+    .neighborhood_selector label {
+        width:250px;
+        margin-top:5px;
+    }
+    select,
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"] {
+        padding:4px;
+        width:350px;
+    }
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus {
+        border-color:#666666;
+    }
+    input[type="checkbox"] {
+        margin-right:10px;
+    }
+    input[type="submit"] {
+        margin:10px 0 20px 0;
+        padding:10px 0;
+        width:100%;
+        font-weight:bold;
+        font-size:1.2em;
+        letter-spacing: 2px;
+        color:#ffffff;
+        background:#851C16;
+        cursor:pointer;
+    }
 }
