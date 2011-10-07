@@ -2,10 +2,10 @@ Giftoffood::Application.routes.draw do
 
   root :to => 'home#index'
 
-  resource :volunteers, :only => [:create] do
+  resource :volunteers, :only => [:new,:create] do
   end
 
-  scope 'admin' do
+  namespace :admin do
     resources :volunteers
   end
 
