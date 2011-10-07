@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h2 {
+    font-family:Georgia;
     font-weight:bold;
     border-top:1px solid #9AA3A0;
     padding:5px 0;
@@ -23,8 +24,12 @@ ul li {
     font-size:1.3em;
 }
 #event_info li span {
+    font-family:Georgia;
     margin-right:10px;
     font-size:1.5em;
     font-weight:bold;
     display:inline-block;
+}
+.sponsor_image {
+    margin-bottom:20px;
 }
