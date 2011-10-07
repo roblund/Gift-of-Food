@@ -6,6 +6,7 @@ Giftoffood::Application.routes.draw do
   end
 
   namespace :admin do
+    root :to => 'volunteers#index'
     resources :volunteers
   end
 
