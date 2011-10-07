@@ -1,0 +1,10 @@
+<%=form_for @volunteer, :url => admin_volunteer_path(@volunteer) do  |v| %>
+  <div><%=v.label :first_name %><%=v.text_field :first_name %></div>
+  <div><%=v.label :last_name %><%=v.text_field :last_name %></div>
+  <div><%=v.label :email %><%=v.email_field :email %></div>
+  <div><%=v.label :telephone %><%=v.telephone_field :phone %><%=v.label :is_mobile,"Mobile?" %><%=v.check_box :is_mobile %></div>
+  <div><%=v.label :neighborhood_id %><%=v.select :neighborhood_id,Neighborhood.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
+  <div><%=v.label :is_team_lead,"Team Lead?" %><%=v.check_box :is_team_lead %></div>
+  <div><%=v.label :zip %><%=v.number_field :zip %></div>
+  <div><%=v.submit "Volunteer" %></div>
+<% end %>

@@ -1,0 +1,3 @@
+<% @volunteers.each do |v| %>
+  <%=link_to "#{v.last_name}, #{v.first_name}",edit_admin_volunteer_path(v) %> <%=link_to "[x]",admin_volunteer_path(v), :method => 'delete' %><br />
+<% end %>
