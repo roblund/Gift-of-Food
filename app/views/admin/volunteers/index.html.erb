@@ -9,7 +9,7 @@
     <th>Neighborhood</th>
   </tr>
   <% @volunteers.each do |v| %>
-    <% if v.is_team_lead %>
+    <% if v.is_team_lead? %>
       <tr class="team_lead">
     <% else %>
       <tr>
@@ -19,7 +19,7 @@
       <td><%=mail_to v.email %></td>
       <td><%=v.zip %></td>
       <td>
-        <% if v.is_mobile %>
+        <% if v.is_mobile? %>
           Mobile: <%=v.phone %>
         <% else %>
           Landline: <%=v.phone %>
