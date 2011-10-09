@@ -1,3 +1,32 @@
-<% @volunteers.each do |v| %>
-  <%=link_to "#{v.last_name}, #{v.first_name}",edit_admin_volunteer_path(v) %> <%=link_to "[x]",admin_volunteer_path(v), :method => 'delete' %><br />
-<% end %>
+<h1>Volunteers</h1>
+<table>
+  <tr>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Email</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Neighborhood</th>
+  </tr>
+  <% @volunteers.each do |v| %>
+    <% if v.is_team_lead %>
+      <tr class="team_lead">
+    <% else %>
+      <tr>
+    <% end %>
+      <td><%=v.last_name %></td>
+      <td><%=v.first_name %></td>
+      <td><%=mail_to v.email %></td>
+      <td><%=v.zip %></td>
+      <td>
+        <% if v.is_mobile %>
+          Mobile: <%=v.phone %>
+        <% else %>
+          Landline: <%=v.phone %>
+        <% end %>
+      </td>
+      <td><!-- neighborhood goes here --></td>
+      <td><%=link_to "Edit", edit_admin_volunteer_path(v) %>&nbsp;|&nbsp;<%=link_to "Delete", admin_volunteer_path(v), :method => 'delete' %></td>
+    </tr>
+  <% end %>
+</table>
