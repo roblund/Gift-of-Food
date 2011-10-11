@@ -1,7 +1,17 @@
 class Admin::VolunteersController < ApplicationController
-  
+
+  require 'fastercsv'
+
   def index
     @volunteers = Volunteer.order('last_name DESC').all
+    
+    respond_to do |format|
+      format.html
+      format.csv do
+        @timestamp = Time.now.strftime('%Y-%m-%d_%H:%M:%S')
+        @filename = "volunteers_#{@timestamp}.csv"
+      end
+    end
   end
 
   def new
@@ -20,7 +30,7 @@ class Admin::VolunteersController < ApplicationController
   def update
     @v = Volunteer.find(params[:id])
     @v.update_attributes!(params[:volunteer])
-    redirect_to edit_admin_volunteer_path(@v)
+    redirect_to admin_volunteers_path
   end
 
   def destroy
