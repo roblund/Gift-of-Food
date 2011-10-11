@@ -25,7 +25,11 @@
           Landline: <%=v.phone %>
         <% end %>
       </td>
-      <td><%=v.neighborhood.name %></td>
+      <td>
+        <% if !v.neighborhood.nil? %>
+          <%=v.neighborhood.name %>
+        <% end %>
+      </td>
       <td><%=link_to "Edit", edit_admin_volunteer_path(v) %>&nbsp;|&nbsp;<%=link_to "Delete", admin_volunteer_path(v), :method => 'delete' %></td>
     </tr>
   <% end %>

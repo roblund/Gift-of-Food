@@ -3,7 +3,7 @@ csv << ["Gift of Food Volunteers"]
 csv << [] # gap between header and data for visibility
 
 # header-row for the data
-csv << ["Last Name", "First Name", "Email", "Phone", "Is Mobile?","Zip", "Neighborhood","Team Lead?"]
+csv << ["Last Name", "First Name", "Email", "Phone", "Is Mobile?", "Zip", "Neighborhood", "Team Lead?"]
 
 row_data = [] # for scoping
 @volunteers.each do |v|
@@ -14,7 +14,7 @@ row_data = [] # for scoping
                v.phone.to_s,
                v.is_mobile,
                v.zip,
-               v.neighborhood.name,
+               (!v.neighborhood.nil?) ? v.neighborhood.name : '',
                v.is_team_lead
              ]
   # and don't forget to add the row to the csv
