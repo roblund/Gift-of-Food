@@ -25,7 +25,7 @@
           Landline: <%=v.phone %>
         <% end %>
       </td>
-      <td><!-- neighborhood goes here --></td>
+      <td><%=v.neighborhood.name %></td>
       <td><%=link_to "Edit", edit_admin_volunteer_path(v) %>&nbsp;|&nbsp;<%=link_to "Delete", admin_volunteer_path(v), :method => 'delete' %></td>
     </tr>
   <% end %>
