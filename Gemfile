@@ -22,6 +22,9 @@ gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
+gem 'fastercsv'
+gem 'csv_builder'
+
 gem 'mongrel'
 
 # Use unicorn as the web server
