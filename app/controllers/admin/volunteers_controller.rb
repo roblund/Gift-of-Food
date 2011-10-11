@@ -9,6 +9,7 @@ class Admin::VolunteersController < ApplicationController
       format.html
       format.csv do
         @timestamp = Time.now.strftime('%Y-%m-%d_%H:%M:%S')
+        @output_encoding = 'UTF-8'
         @filename = "volunteers_#{@timestamp}.csv"
       end
     end
