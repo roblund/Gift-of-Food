@@ -22,8 +22,6 @@ gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
-gem 'rack', '1.2.1'
-
 gem 'fastercsv'
 gem 'csv_builder'
 
