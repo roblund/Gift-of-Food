@@ -8,8 +8,8 @@
 
 @mixin box_shadow($offset, $size) {
     -moz-box-shadow:$offset $offset $size #222;
-    -webkit-box-shadow: $offset $offset $size #222;
-    box-shadow: $offset $offset $size #222;
+    -webkit-box-shadow:$offset $offset $size #222;
+    box-shadow:$offset $offset $size #222;
 }
 body {
     background:url(bg.gif);
