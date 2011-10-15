@@ -8,6 +8,7 @@ gem 'rails', '3.1.0'
 gem 'rack', '1.3.3'
 
 gem 'sqlite3'
+gem 'mysql2', :platforms => :ruby
 
 gem 'json'
 
