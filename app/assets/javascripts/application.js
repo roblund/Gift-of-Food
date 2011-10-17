@@ -6,4 +6,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.colorbox.min.js
 //= require_tree .
+
+//screenshot colorbox
+$('a.map_link').colorbox({ maxHeight: "100%" });

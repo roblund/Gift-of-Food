@@ -9,11 +9,17 @@
   </div>
 
   <div class="span-12 last">
-    <div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead, "I would like to be a Team Lead" %></div>
-    <div class="neighborhood_selector">
-      <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
-      <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
-    </div>
+    <% if @volunteer.neighborhood_id.nil? %>
+      <div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead, "I would like to be a Team Lead" %></div>
+      <div class="neighborhood_selector">
+        <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
+        <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
+      </div>
+    <% else %>
+      <div><span class="assigned_label">Team Leader:</span>&nbsp;##insert team lead here##</div>
+      <div><span class="assigned_label">Assigned Neighborhood:</span>&nbsp;<%=@volunteer.neighborhood.name %></div>
+      <div class="map_thumb"><%=link_to(image_tag("maps/thumbs/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood map"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
+    <% end %>
   </div>
 
   <div class="prepend-9 span-6 append-9">
