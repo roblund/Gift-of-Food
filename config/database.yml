@@ -21,9 +21,9 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: theredhoodie_gof
+  database: gof
   pool: 5
   timeout: 5000
-  username: roblund
+  username: gof
   password: uAXh8*ab
-  host: mysql.gof.theredhoodie.com
+  host: localhost
