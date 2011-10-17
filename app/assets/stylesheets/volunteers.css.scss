@@ -10,6 +10,9 @@
         padding:0;
         margin:0;
     }
+    .assigned_label {
+      font-weight:bold;
+    }
     input,
     select {
         margin:0 0 10px 0;
@@ -44,6 +47,11 @@
     }
     input[type="checkbox"] {
         margin-right:10px;
+    }
+    .map_thumb img {
+        margin-top:5px;
+        padding:5px;
+        border:1px solid #9AA3A0;
     }
     input[type="submit"] {
        border-top: 1px solid #757575;
