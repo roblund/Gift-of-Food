@@ -74,7 +74,7 @@ GEM
     multi_json (1.0.3)
     mysql2 (0.3.7)
     polyglot (0.3.2)
-    rack (1.3.4)
+    rack (1.3.3)
     rack-cache (1.0.3)
       rack (>= 0.4)
     rack-mount (0.8.3)
@@ -111,7 +111,7 @@ GEM
     sprockets (2.0.2)
       hike (~> 1.2)
       rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
+      tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.4)
     sqlite3 (1.3.4-x86-mingw32)
     therubyracer (0.9.8)
@@ -139,7 +139,7 @@ DEPENDENCIES
   json
   mongrel
   mysql2
-  rack (~> 1.3.4)
+  rack (= 1.3.3)
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
   sqlite3
