@@ -10,5 +10,6 @@
 //= require_tree .
 
 $(document).ready(function(){
-    $("a.map_link").colorbox({ maxHeight: "100%" });
+    //start up the colorbox for viewing the maps
+    $('a.map_link').colorbox({ maxHeight: '100%' });
 });
