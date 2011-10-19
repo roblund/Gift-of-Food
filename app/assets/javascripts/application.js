@@ -8,3 +8,7 @@
 //= require jquery_ujs
 //= require jquery.colorbox.min.js
 //= require_tree .
+
+$(document).ready(function(){
+    $("a.map_link").colorbox({ maxHeight: "100%" });
+});
