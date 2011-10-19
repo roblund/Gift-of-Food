@@ -11,7 +11,9 @@
         margin:0;
     }
     .assigned_label {
-      font-weight:bold;
+        font-weight:bold;
+        display:inline-block;
+        margin-bottom:12px;
     }
     input,
     select {
@@ -21,6 +23,9 @@
     }
     .mobile_check input {
         margin-left:100px;
+    }
+    .neighborhood_selector {
+        margin-top:6px;
     }
     .neighborhood_selector label {
         width:250px;

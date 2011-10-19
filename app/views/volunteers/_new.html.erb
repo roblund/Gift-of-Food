@@ -18,10 +18,11 @@
       <div class="neighborhood_selector">
         <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
         <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
+        <div class="map_thumb hidden_thing"><a class="map_link" rel="maps" href="" title=""><img class="map_image" src="" alt="Neighborhood map" /></a></div>
       </div>
     <% else %>
       <div><span class="assigned_label">Assigned Neighborhood:</span>&nbsp;<%=@volunteer.neighborhood.name %></div>
-      <div class="map_thumb"><%=link_to(image_tag("maps/thumbs/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood map"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
+      <div class="map_thumb"><%=link_to(image_tag("maps/thumbs/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood map", :class => ".map_image"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
     <% end %>
   </div>
 
