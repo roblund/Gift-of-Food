@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110927031035) do
+ActiveRecord::Schema.define(:version => 20111019014915) do
 
   create_table "neighborhoods", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name",       :null => false
+    t.string   "name",         :null => false
     t.string   "filename"
+    t.integer  "volunteer_id"
   end
 
   create_table "volunteers", :force => true do |t|
@@ -28,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20110927031035) do
     t.string   "email"
     t.string   "phone"
     t.boolean  "is_mobile"
-    t.boolean  "is_team_lead"
     t.integer  "neighborhood_id"
   end
 
