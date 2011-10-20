@@ -4,8 +4,8 @@
     <div><%=v.label :last_name, "Last Name" %><%=v.text_field :last_name %></div>
     <div><%=v.label :email %><%=v.email_field :email %></div>
     <div><%=v.label :telephone, "Phone" %><%=v.telephone_field :phone %></div>
-    <div class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
-    <div><%=v.label :zip %><%=v.number_field :zip %></div>
+    <div class="mobile_check group"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
+    <div class="zip_field"><%=v.label :zip %><%=v.number_field :zip %></div>
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="neighborhood_selector">
         <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
@@ -21,7 +21,7 @@
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="map_thumb"><%= link_to(image_tag("maps/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
     <% else %>
-      <div class="map_thumb"><%=link_to(image_tag("maps/thumbs/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
+      <div class="map_thumb"><%=link_to(image_tag("maps/small/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
     <% end %>
   </div>
 
