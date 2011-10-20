@@ -13,7 +13,7 @@
     .assigned_label {
         font-weight:bold;
         display:inline-block;
-        margin-bottom:12px;
+        margin:5px 0 5px 0;
     }
     input,
     select {
@@ -36,11 +36,22 @@
         width:362px;
         height:26px;
     }
-    .mobile_check label,
-    .team_lead_check label,
-    {
+    .mobile_check input {
+        float:left;
+        margin-top:10px;
+    }
+    .mobile_check label {
+        float:left;
         width:250px;
         margin:5px 0 10px 0;
+    }
+    .team_lead_check label {
+        width:250px;
+        margin:5px 0 10px 0;
+    }
+    .zip_field label {
+        margin-left:2px;
+        width:98px;
     }
     input[type="text"],
     input[type="number"],
