@@ -1,32 +1,31 @@
-<%=form_for(@volunteer) do  |v| %>
+<%=form_for @volunteer, :html => { :class => "new_volunteer group" } do  |v| %>
   <div class="span-12">
-    <% if @volunteer.neighborhood_id.nil? %>
-      <div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead, "I would like to be a Team Lead" %></div>
-    <% else %>
-      <div><span class="assigned_label">Team Leader:</span>&nbsp;##insert team lead here##</div>
-    <% end %>
     <div><%=v.label :first_name, "First Name" %><%=v.text_field :first_name %></div>
     <div><%=v.label :last_name, "Last Name" %><%=v.text_field :last_name %></div>
     <div><%=v.label :email %><%=v.email_field :email %></div>
     <div><%=v.label :telephone, "Phone" %><%=v.telephone_field :phone %></div>
     <div class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
     <div><%=v.label :zip %><%=v.number_field :zip %></div>
-  </div>
-
-  <div class="span-12 last">
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="neighborhood_selector">
         <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
         <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
-        <div class="map_thumb hidden_thing"><a class="map_link" rel="maps" href="" title=""><img class="map_image" src="" alt="Neighborhood map" /></a></div>
       </div>
     <% else %>
+      <div><span class="assigned_label">Team Leader:</span>&nbsp;##insert team lead here##</div>
       <div><span class="assigned_label">Assigned Neighborhood:</span>&nbsp;<%=@volunteer.neighborhood.name %></div>
-      <div class="map_thumb"><%=link_to(image_tag("maps/thumbs/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood map", :class => ".map_image"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
     <% end %>
   </div>
 
-  <div class="prepend-9 span-6 append-9">
+  <div class="prepend-1 span-10 append-1 last">
+    <% if @volunteer.neighborhood_id.nil? %>
+      <div class="map_thumb"><%= link_to(image_tag("maps/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
+    <% else %>
+      <div class="map_thumb"><%=link_to(image_tag("maps/thumbs/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
+    <% end %>
+  </div>
+
+  <div class="span-4 append-20 last">
     <div><%=v.submit "Volunteer!" %></div>
   </div>
 <% end %>

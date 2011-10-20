@@ -29,14 +29,19 @@
     }
     .neighborhood_selector label {
         width:250px;
+        margin-bottom:5px;
+    }
+    .neighborhood_selector select {
+        margin-left:100px;
+        width:362px;
+        height:26px;
     }
     .mobile_check label,
     .team_lead_check label,
-     {
+    {
         width:250px;
         margin:5px 0 10px 0;
     }
-    select,
     input[type="text"],
     input[type="number"],
     input[type="tel"],
@@ -53,9 +58,9 @@
     input[type="checkbox"] {
         margin-right:10px;
     }
+    .map_thumb {
+    }
     .map_thumb img {
-        margin-top:5px;
-        padding:5px;
         border:1px solid #9AA3A0;
     }
     input[type="submit"] {
