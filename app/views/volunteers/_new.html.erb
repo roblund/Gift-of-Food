@@ -1,5 +1,8 @@
 <%=form_for @volunteer, :html => { :class => "new_volunteer group" } do  |v| %>
   <div class="span-12">
+    <% if !@error_message.nil? %>
+      <div class="error_message"><%= @error_message %></div>
+    <% end %>
     <div><%=v.label :first_name, "First Name" %><%=v.text_field :first_name %></div>
     <div><%=v.label :last_name, "Last Name" %><%=v.text_field :last_name %></div>
     <div><%=v.label :email %><%=v.email_field :email %></div>
