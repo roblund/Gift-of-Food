@@ -5,7 +5,7 @@ class VolunteersController < ApplicationController
   end
 
   def create
-    v = Volunteer.create(params[:volunteer])
+    @volunteer = Volunteer.create(params[:volunteer])
   end
 
 end
