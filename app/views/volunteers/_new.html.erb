@@ -3,12 +3,12 @@
     <% if !@error_message.nil? %>
       <div class="error_message"><%= @error_message %></div>
     <% end %>
-    <div><%=v.label :first_name, "First Name" %><%=v.text_field :first_name %></div>
-    <div><%=v.label :last_name, "Last Name" %><%=v.text_field :last_name %></div>
-    <div><%=v.label :email %><%=v.email_field :email %></div>
-    <div><%=v.label :telephone, "Phone" %><%=v.telephone_field :phone %></div>
+    <div><%=v.label :first_name, "First Name *" %><%=v.text_field :first_name %></div>
+    <div><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
+    <div><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
+    <div><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %></div>
     <div class="mobile_check group"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
-    <div class="zip_field"><%=v.label :zip %><%=v.number_field :zip %></div>
+    <div class="zip_field"><%=v.label :zip, "Zip *" %><%=v.number_field :zip %></div>
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="neighborhood_selector">
         <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
