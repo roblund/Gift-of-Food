@@ -12,7 +12,7 @@
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="neighborhood_selector">
         <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
-        <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
+        <div><%=v.select :neighborhood_id, Neighborhood.where('volunteer_id IS NULL').collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
       </div>
     <% else %>
       <div><span class="assigned_label">Team Leader:</span>&nbsp;##insert team lead here##</div>
