@@ -1,10 +1,9 @@
-<%=form_for @volunteer, :url => admin_volunteers_path do |v| %>
   <div class="span-24 last"><%=v.label :first_name %><%=v.text_field :first_name %></div>
   <div class="span-24 last"><%=v.label :last_name %><%=v.text_field :last_name %></div>
   <div class="span-24 last"><%=v.label :email %><%=v.email_field :email %></div>
   <div class="span-24 last"><%=v.label :telephone %><%=v.telephone_field :phone %><span class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Mobile?" %></span></div>
   <div class="span-24 last"><%=v.label :zip %><%=v.number_field :zip %></div>
-  <div class="span-24 last"><div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead,"Team Lead?" %></div></div>
+  <div class="span-24 last"><div class="team_lead_check"><%=v.check_box :is_team_lead? %><%=v.label :is_team_lead?,"Team Lead?" %></div></div>
   <div class="span-24 last">
     <div class="neighborhood_selector">
       <div><%=v.label :neighborhood_id, "Neighborhoods:" %></div>
@@ -13,4 +12,3 @@
   </div>
   <div class="span-4"><%=v.submit "Save" %></div>
   <div class="span-4 append-16 last"><%=link_to "Cancel", admin_volunteers_path, :class => "cancel" %></div>
-<% end %>

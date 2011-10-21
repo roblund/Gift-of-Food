@@ -1,7 +1,7 @@
 <%=form_for(@volunteer) do  |v| %>
   <div class="span-12">
     <% if @volunteer.neighborhood_id.nil? %>
-      <div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead, "I would like to be a Team Lead" %></div>
+      <div class="team_lead_check"><%=check_box_tag :is_team_lead %><%=v.label :is_team_lead, "I would like to be a Team Lead" %></div>
     <% else %>
       <div><span class="assigned_label">Team Leader:</span>&nbsp;##insert team lead here##</div>
     <% end %>
