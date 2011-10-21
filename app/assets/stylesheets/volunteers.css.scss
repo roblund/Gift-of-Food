@@ -13,7 +13,7 @@
     .assigned_label {
         font-weight:bold;
         display:inline-block;
-        margin-bottom:12px;
+        margin:5px 0 5px 0;
     }
     input,
     select {
@@ -29,14 +29,30 @@
     }
     .neighborhood_selector label {
         width:250px;
+        margin-bottom:5px;
     }
-    .mobile_check label,
-    .team_lead_check label,
-     {
+    .neighborhood_selector select {
+        margin-left:100px;
+        width:362px;
+        height:26px;
+    }
+    .mobile_check input {
+        float:left;
+        margin-top:10px;
+    }
+    .mobile_check label {
+        float:left;
         width:250px;
         margin:5px 0 10px 0;
     }
-    select,
+    .team_lead_check label {
+        width:250px;
+        margin:5px 0 10px 0;
+    }
+    .zip_field label {
+        margin-left:2px;
+        width:98px;
+    }
     input[type="text"],
     input[type="number"],
     input[type="tel"],
@@ -53,9 +69,9 @@
     input[type="checkbox"] {
         margin-right:10px;
     }
+    .map_thumb {
+    }
     .map_thumb img {
-        margin-top:5px;
-        padding:5px;
         border:1px solid #9AA3A0;
     }
     input[type="submit"] {
