@@ -1,16 +1,14 @@
-<%=form_for @volunteer, :url => admin_volunteers_path do |v| %>
-  <div class="span-24 last"><%=v.label :first_name, "First Name *" %><%=v.text_field :first_name %></div>
-  <div class="span-24 last"><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
-  <div class="span-24 last"><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
-  <div class="span-24 last"><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %><span class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Mobile?" %></span></div>
-  <div class="span-24 last"><%=v.label :zip, "Zip *" %><%=v.number_field :zip %></div>
-  <div class="span-24 last"><div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead,"Team Lead?" %></div></div>
-  <div class="span-24 last">
-    <div class="neighborhood_selector">
-      <div><%=v.label :neighborhood_id, "Neighborhoods:" %></div>
-      <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
-    </div>
+<div class="span-24 last"><%=v.label :first_name, "First Name *" %><%=v.text_field :first_name %></div>
+<div class="span-24 last"><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
+<div class="span-24 last"><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
+<div class="span-24 last"><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %><span class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Mobile?" %></span></div>
+<div class="span-24 last"><%=v.label :zip, "Zip *" %><%=v.number_field :zip %></div>
+<div class="span-24 last"><div class="team_lead_check"><%=v.check_box :is_team_lead %><%=v.label :is_team_lead,"Team Lead?" %></div></div>
+<div class="span-24 last">
+  <div class="neighborhood_selector">
+    <div><%=v.label :neighborhood_id, "Neighborhoods:" %></div>
+    <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
   </div>
-  <div class="span-4"><%=v.submit "Save" %></div>
-  <div class="span-4 append-16 last"><%=link_to "Cancel", admin_volunteers_path, :class => "cancel" %></div>
-<% end %>
+</div>
+<div class="span-4"><%=v.submit "Save" %></div>
+<div class="span-4 append-16 last"><%=link_to "Cancel", admin_volunteers_path, :class => "cancel" %></div>
