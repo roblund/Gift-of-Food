@@ -16,6 +16,9 @@ class VolunteersController < ApplicationController
       neighborhood.team_lead = v
       neighborhood.save
     end
+    
+    VolunteerMailer.thank_you(v).deliver
+  
   end
 
 end
