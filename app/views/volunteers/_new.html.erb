@@ -11,7 +11,7 @@
     <div class="zip_field"><%=v.label :zip, "Zip *" %><%=v.number_field :zip %></div>
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="neighborhood_selector">
-        <div><%=v.label :neighborhood_id, "Available Neighborhoods:" %></div>
+        <div><%=v.label :neighborhood_id, "Available Neighborhoods *" %></div>
         <div><%=v.select :neighborhood_id, Neighborhood.where('volunteer_id IS NULL').collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
       </div>
     <% else %>
