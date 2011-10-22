@@ -1,4 +1,4 @@
-<h1>Volunteers</h1>
+<h1>Volunteer Team Leads</h1>
 
 <table>
   <tr>
@@ -10,11 +10,7 @@
     <th>Neighborhood</th>
   </tr>
   <% @volunteers.each do |v| %>
-    <% if v.is_team_lead? %>
-      <tr class="team_lead">
-    <% else %>
-      <tr>
-    <% end %>
+    <tr>
       <td><%=v.last_name %></td>
       <td><%=v.first_name %></td>
       <td><%=mail_to v.email %></td>

@@ -1,5 +1,5 @@
 <h1>Edit Volunteer</h1>
 
 <%=form_for @volunteer, :url => admin_volunteer_path(@volunteer) do |v| %>
-  <%=render :partial => 'form',:locals => {:v => v} %>
+  <%=render :partial => 'form', :locals => {:v => v} %>
 <% end if %>
