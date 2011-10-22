@@ -19,7 +19,12 @@
     <%=link_to "Return to the Main Page", :root %>
   <% else %>
     <h1>There was an error</h1>
-    <p>We're sorry but it looks like there were some fields missing from the New Volunteer form. Could you please return, enter any missing data and submit again.</p>
-    <p>Thank you.</p>
+    <div class="errors_list">
+      <% @volunteer.errors.full_messages.each do |m| %>
+        <div><%= m %></div>
+      <% end %>
+    </div>
+    <p>We're sorry but it looks like there was an error processing your request. Could you please return, enter correct any issues and submit again.</p>
+    <p>Thank you.</p>    
   <% end %>
 </div>
