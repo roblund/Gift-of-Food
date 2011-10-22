@@ -12,4 +12,6 @@
 $(document).ready(function(){
     //start up the colorbox for viewing the maps
     $('a.map_link').colorbox({ maxHeight: '100%' });
+    //start up the colorbox for the photos from previous years
+    $('a.photo_link').colorbox({ maxHeight: '100%' });
 });
