@@ -1,21 +1,17 @@
 class VolunteersController < ApplicationController
-  
+
   def new
     @volunteer = Volunteer.new
   end
 
   def create
+    #remove team lead from the params, if sent in
     team_lead = params[:volunteer].delete(:is_team_lead)
     @volunteer = Volunteer.create(params[:volunteer])
-    
-    neighborhood = v.neighborhood 
-    
-    # if they are the team lead, we need to remove the team lead from params
-    # and update the neighborhood table instead
-    if team_lead and v.neighborhood.team_lead.nil?
-      neighborhood.team_lead = v
-      neighborhood.save
-    end
+
+    #this year, automatically make them a team lead
+    @volunteer.neighborhood.team_lead = @volunteer
+    @volunteer.neighborhood.save
   end
 
 end

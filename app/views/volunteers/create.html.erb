@@ -1,4 +1,4 @@
-<% if @volunteer.errors.nil? %>
+<% if @volunteer.valid? %>
   <h1>Thank You</h1>
   <p>Thank you for volunteering! Watch your email inbox for a confirmation email and further instructions. We look foward to seeing everybody on December 10th.</p>
   <%=link_to "Return to the Main Page", :root %>
