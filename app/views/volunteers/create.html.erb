@@ -1,25 +1,9 @@
-<div class="span-24 last">
-  <% if @volunteer.valid? %>
-    <h1>Thank You</h1>
-    <div class="prepend-2 span-20 append-2 last">
-      <p>Thank you for volunteering! Watch your email inbox for a confirmation email and further instructions. We look foward to seeing everybody on December 10th.</p>
-    </div>
-    
-    <% if !@volunteer.neighborhood.nil? %>
-      <div class="prepend-4 span-16 append-4 last">
-        <%= image_tag("maps/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image") %>
-      </div>
-      
-      <div class="prepend-2 span-20 append-2 last">
-        <h3>Safety Information:</h3>
-        <p>Be careful crossing busy streets. Watch out for ice on driveways and sidewalks.</p>
-      </div>
-    <% end %>
-    
-    <%=link_to "Return to the Main Page", :root %>
-  <% else %>
-    <h1>There was an error</h1>
-    <p>We're sorry but it looks like there were some fields missing from the New Volunteer form. Could you please return, enter any missing data and submit again.</p>
-    <p>Thank you.</p>
-  <% end %>
-</div>
+<% if @volunteer.valid? %>
+  <h1>Thank You</h1>
+  <p>Thank you for volunteering! Watch your email inbox for a confirmation email and further instructions. We look foward to seeing everybody on December 10th.</p>
+  <%=link_to "Return to the Main Page", :root %>
+<% else %>
+  <h1>There was an error</h1>
+  <p>We're sorry but it looks like there were some fields missing from the New Volunteer form. Could you please return, enter any missing data and submit again.</p>
+  <p>Thank you.</p>
+<% end %>
