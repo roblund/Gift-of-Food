@@ -1,5 +1,6 @@
 class Volunteer < ActiveRecord::Base
-
+  validates :first_name, :last_name, :email, :phone, :zip, :neighborhood, :presence => true
+  validates :email, :uniqueness => true
   belongs_to :neighborhood
   
   def is_team_lead?
