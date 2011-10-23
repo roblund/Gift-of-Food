@@ -10,13 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111019014915) do
+ActiveRecord::Schema.define(:version => 20111022163719) do
 
   create_table "neighborhoods", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name",         :null => false
-    t.string   "filename"
     t.integer  "volunteer_id"
   end
 
