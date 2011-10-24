@@ -11,13 +11,13 @@ class VolunteersController < ApplicationController
     @volunteer = Volunteer.create(params[:volunteer])
   
     #make sure we don't have any error messages before we try to assign the neighborhood
-    if @volunteer.errors.messages.nil?
+    if @volunteer.errors.messages.count == 0
       #this year, automatically make them a team lead
       @volunteer.neighborhood.team_lead = @volunteer
       @volunteer.neighborhood.save
     end
     
-    VolunteerMailer.thank_you(v).deliver
+    VolunteerMailer.thank_you(@volunteer).deliver
   
   end
 
