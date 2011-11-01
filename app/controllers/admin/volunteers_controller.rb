@@ -43,7 +43,12 @@ class Admin::VolunteersController < ApplicationController
   end
 
   def destroy
-    Volunteer.find(params[:id]).delete
+    v = Volunteer.find(params[:id])
+    if v.neighborhood.team_lead = v
+      v.neighborhood.team_lead = nil
+      v.neighborhood.save
+    end
+    v.delete
     redirect_to admin_volunteers_path
   end
 
