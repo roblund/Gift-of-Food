@@ -6,134 +6,133 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
-Neighborhood.create(:name => "CATTAIL NORTH", :id => 1)
-Neighborhood.create(:name => "CATTAIL SOUTH", :id => 2)
-Neighborhood.create(:name => "BAXTER LN / HARPER PUCKET / LASSO", :id => 3)
-Neighborhood.create(:name => "BAXTER LN / FERGUSON / GALLATIN GREEN BLVD", :id => 4)
-Neighborhood.create(:name => "BAXTER LN / VAQUERO / CABALLO AVE", :id => 5)
-Neighborhood.create(:name => "BAXTER LN / N 27TH (BRENTWOOD)", :id => 6)
-Neighborhood.create(:name => "WESTGATE NORTH", :id => 7)
-Neighborhood.create(:name => "DURSTON / ROSA / WEST OAK", :id => 8)
-Neighborhood.create(:name => "HARVEST CREEK NW", :id => 9)
-Neighborhood.create(:name => "HARVEST CREEK SE", :id => 10)
-Neighborhood.create(:name => "HARVEST CREEK - NEW HOLLAND / ROSE / OLIVER / ORC", :id => 11)
-Neighborhood.create(:name => "DURSTON MEADOWS - BUCKRAKE / GOLDENROD / DAISY", :id => 12)
-Neighborhood.create(:name => "DURSTON MEADOWS - ASTER / DAFFODIL / SNAP DRAGON", :id => 13)
-Neighborhood.create(:name => "WALTON HOMESTEAD / NORTH 15TH", :id => 14)
-Neighborhood.create(:name => "WALTON HOMESTEAD / SOUTH 15TH", :id => 15)
-Neighborhood.create(:name => "FERGUSON MEADOWS 1 - STAFFORD / CASCADE / ALEXAND", :id => 16)
-Neighborhood.create(:name => "FERGUSON MEADOWS 2 - HANLEY AVE / MONROE / COVER", :id => 17)
-Neighborhood.create(:name => "FLATHEAD & TETON AVE / BROADWATER ST / SPRUCE MEA", :id => 18)
-Neighborhood.create(:name => "SHERIDAN AVE / SHERIDAN PLACE / N & S SWEETGRASS", :id => 19)
-Neighborhood.create(:name => "HUNTERS WAY BETWEEN MENDENHALL & DURSTON / GREENW", :id => 20)
-Neighborhood.create(:name => "HUNTERS WAY / MEGHANS WAY / SUNLIGHT / WESTERN", :id => 21)
-Neighborhood.create(:name => "WILLOWBROOK CONDOS / NORTH 23RD", :id => 22)
-Neighborhood.create(:name => "NORTH 15TH / NORTH 16TH / NORTH 17TH / NORTH 18TH", :id => 23)
-Neighborhood.create(:name => "SLOUGH CREEK / STILLWATER CREEK / PALLISADE DR", :id => 24)
-Neighborhood.create(:name => "VALLEY COMMONS - FALLON / SOUTH FERGUSON / WEST B", :id => 25)
-Neighborhood.create(:name => "VALLEY COMMONS - FALLON / PRAIRIE / WEST BABCOCK", :id => 26)
-
-# POND ROW / WEST BABCOCK / DONNA AVE / WHITE OAK  27
-# WEST KOCH / SOUTH 2OTH / SOUTH 16TH / SOUTH 15TH  28
-# WEST DICKERSON / WILLOWBROOK CONDOS  29
-# LOYAL GARDENS SUBDIVISION  30
-# MSU STUDENT HOUSING  31
-# MSU STUDENT HOUSING  32
-# HILL STREET / HIGHLAND / SPRING CREEK  33
-# WESTRIDGE NORTH  34
-# WESTRIDGE SOUTH  35
-# ALDER CREEK SUBDIVISION  36
-# WESTFIELD SUBDIVISION NORTH  37
-# WAGONWHEEL WEST  38
-# GARDENERPARK SUBDIVISION  39
-# HITCHING POST SOUTH  40
-# SOURDOUGH RIDGE  41
-# PAINTED HILLS  42
-# HIGHLAND (COMBINE MAPS TO INCLUDE ALL HOMES)  43
-# N.PINECREST / N.CEDARVIEW  44
-# HOLLY DR - ASH DR  45
-# NORTH WALLACE / MENDENHALL / VILLAGE DOWNTOWN  46
-# NORTH 8TH & NORTH 9TH  47
-# PORTION OF 3RD / 4TH / 5TH / 6TH (BETWEEN PEACH A*  48
-# EAST PEACH / NORTH GRAND / NORTH BLACK / EAST VIL*  49
-# WEST PEACH / NORTH 3RD / WEST TAMARACK / NORTH TR*  50
-# WEST MAIN / NORTH 7TH / WEST VILLARD / NORTH WILLSON  51
-# EAST PEACH / NORTH BLACK / TAMARACK / ROUSE(EAST *  52
-# BEALL PARK AREA  53
-# DELETE / ADD PORTIONS TO MAP 67  54
-# EAST PEACH / ROUSE / EAST TAMARACK / FRONT  55
-# EAST LAMME / ROUSE / EAST PEACH / NORTH CHURCH  56
-# WEST KOCH / SOUTH 15TH / WEST BABCOCK / SOUTH 11TH  57
-# WEST COLLEGE / SOUTH / WEST DICKERSON / SOTH 8TH  58
-# STORY / SOUTH 15TH / KOCH / 8TH AVE  59
-# WEST OLIVE / NORTH 11TH / WEST MAIN / SOUTH 4TH  60
-# WEST KOCH(PORTION OF) / SOTH 11TH / WEST CURTISS *  61
-# WEST DICKERSON / SOUTH 8TH / WEST STORY / SOUTH W*  62
-# WEST COLLEGE / SOUTH 8TH / WEST ALDERSON / SOUTH *  63
-# EAST KOCH / SOUTH 3RD / WEST OLIVE / LINDLEY PL  64
-# SOUTH WILLSON / SOUTH TRACY / (BETWEEN EAST COLLE*  65
-# WEST CLEVELAND / SOUTH 8TH / WEST HARRISON / SOUT*  66
-# WEST GARFIELD / SOUTH 7TH / ARTHUR / SOUTH WILLSO*  67
-# WEST GARFIELD / SOUTH WILLSON(BOTH SIDES) / SOUTH*  68
-# EAST MASON / SOUTH BLACK / EAST CLEVELAND / SOUTH*  69
-# WEST GRANT / SOUTH 6TH / WEST HAYES / SOUTH WILLS*  70
-# BONNER LANE / SOUTH ROUSE / EAST BABCOCK / SOUTH *  71
-# NORTH MEADOW CREEK  72
-# WEST FIELDVIEW / EAST FIELDVIEW  73
-# WESTGATE SOUTH  74
-# HARVEST CREEK SW  75
-# HARVEST CREEK NE  76
-# HARVEST CREEK - NEW HOLLAND / ANNIE / LILLY  77
-# HARVEST CREEK - NEW HOLLAND / MEDIAN / DURHAM / F*  78
-# DURSTON MEADOWS - ALLISON CT / CASE CT / HARRIS /*  79
-# BRENTWOOD - WOODLAND / MAPLEWOOD / MOUNTAIN ASH /*  80
-# MINERAL / SANDERS AVE BETWEEN DURSTON & BABCOCK  81
-# NORTH YELLOWSTONE BETWEEN DURSTON & BABCOCK / CHO*  82
-# W BABCOCK  - CAMEAHWAIT ST  83
-# W BABCOCK - MICHAEL GROVE AVE  84
-# W VILLARD ST - MICHAEL GROVE AVE  85
-# WESTERN & NORTH 25TH BETWEEN MENDENHALL & DURSTON*  86
-# W BABCOCK ST - N 24TH AVE - W BEALL ST  87
-# N ORTH 19TH(WEST SIDE) - NORTH 20TH / NORTH 21ST *  88
-# ARNOLD ST - CIRCLE DR  89
-# GRAF ST - S 3RD AVE - HENDERSON ST  90
-# ADD THIS PORTION OF MAP TO MAP #38 ABOVE  91
-# WAGONWHEEL EAST  92
-# SUNDANCE SPRINGS SUBDIVISON  93
-# S.CEDARVIEW / S.SPRUCE  94
-# OCONNEL DR - KENYON DR  95
-# CHERRY DRIVE / FIRCREST / ASH / MAPLE / HOLLY DR  96
-# BOZEMAN TRAIL  97
-# BOGART NEIGHBORHOOD  98
-# NORTH 1OTH & NORTH 11TH  99
-# DELETE / ADD PORTIONS TO MAP 67  100
-# VILLAGE DOWNTOWN  101
-# WEST KOCH / SOUTH 15TH / WEST BABCOCK / SOUTH 11TH  102
-# EAST ALDERSON / SOUTH BLACK / EAST STORY / DELL P*  103
-# ACCOLA / HOFFMAN / SOUTH ROUSE  104
-# KAGY / GREEK WAY / SOUTH 3RD / SOUTH GRAND / WEST*  105
-# W FIELDVIEW CIR - E FIELDVIEW CIR  106
-# ELK GROVE 3  107
-# ELK GROVE 2  108
-# ELK GROVE 1  109
-# W MAGNOLIA DR - N RIVER ROCK DR - THORPE RD  110
-# N SHORE DRIVE - SHALLOW BROOK LN - GREEN TREE DR - THORPE RD  111
-# W RIVER ROCK RD -  ROYAL RD - ENGBERG LN - SHALLOW BROOK LN  112
-# W RIVER ROCK RD - PEBBLE BROOK LN - WEST SHORE DR - W SHORE DR  113
-# AMSTERDAM RD -  SIBLEY LN - THORPE RD  114
-# SIBLEY LN - WOOSMAN DR - THORPE RD  115
-# GOLDEN WEST DR - WESTWOOD DR - CRUISER LN  116
-# GOLDEN WEST DR - JACKRABBIT LN - CRUISER LN - SPOONER RD  117
-# WESTWOOD CORCLE - OAKWOOD DR - JACKRABIBIT RD  118
-# MAYFAIR DR - JACKRABBIT RD - GOLDEN WEST DR  119
-# FRONTAGE RD -  13TH ST - W PARK AVE - 9TH ST  120
-# FRONTAGE RD - 9TH ST - W ALLISON AVE -  6TH ST  121
-# MCEWEN DR - SPOONER RD -  AL DR  122
-# W CENTRAL AVE - JACKRABBIT RD -  TRIPLE CROWN RD - SPOONER RD  123
-# W CENTRAL AVE - N HOFFMAN ST - W CAMERON AVE - N WEAVER ST  124
-# E CENTRAL AVE - N WEAVER ST - E CAMERON AVE  125
-# E ROSEBUD AVE - PRARIE DOG LN - E MADISON AVE  126
-# E SILVERBOW AVE - OREGON ST - E NORTHERN PACIFIC AVE  127
-# YELLOWSTONE AVE - OREGON ST - E SILVERBOW AVE  128
-# STILES AVE - E ROASEBUD AVE -  JEANETTE PL  129
-# IDAHO ST - LAS CAMPANAS DR - WYOMING ST  130
+Neighborhood.create(:name => "CATTAIL NORTH")
+Neighborhood.create(:name => "CATTAIL SOUTH")
+Neighborhood.create(:name => "BAXTER LN / HARPER PUCKET / LASSO")
+Neighborhood.create(:name => "BAXTER LN / FERGUSON / GALLATIN GREEN BLVD")
+Neighborhood.create(:name => "BAXTER LN / VAQUERO / CABALLO AVE")
+Neighborhood.create(:name => "BAXTER LN / N 27TH (BRENTWOOD)")
+Neighborhood.create(:name => "WESTGATE NORTH")
+Neighborhood.create(:name => "DURSTON / ROSA / WEST OAK")
+Neighborhood.create(:name => "HARVEST CREEK NW")
+Neighborhood.create(:name => "HARVEST CREEK SE")
+Neighborhood.create(:name => "HARVEST CREEK - NEW HOLLAND / ROSE / OLIVER / ORC")
+Neighborhood.create(:name => "DURSTON MEADOWS - BUCKRAKE / GOLDENROD / DAISY")
+Neighborhood.create(:name => "DURSTON MEADOWS - ASTER / DAFFODIL / SNAP DRAGON")
+Neighborhood.create(:name => "WALTON HOMESTEAD / NORTH 15TH")
+Neighborhood.create(:name => "WALTON HOMESTEAD / SOUTH 15TH")
+Neighborhood.create(:name => "FERGUSON MEADOWS 1 - STAFFORD / CASCADE / ALEXAND")
+Neighborhood.create(:name => "FERGUSON MEADOWS 2 - HANLEY AVE / MONROE / COVER")
+Neighborhood.create(:name => "FLATHEAD & TETON AVE / BROADWATER ST / SPRUCE MEA")
+Neighborhood.create(:name => "SHERIDAN AVE / SHERIDAN PLACE / N & S SWEETGRASS")
+Neighborhood.create(:name => "HUNTERS WAY BETWEEN MENDENHALL & DURSTON / GREENW")
+Neighborhood.create(:name => "HUNTERS WAY / MEGHANS WAY / SUNLIGHT / WESTERN")
+Neighborhood.create(:name => "WILLOWBROOK CONDOS / NORTH 23RD")
+Neighborhood.create(:name => "NORTH 15TH / NORTH 16TH / NORTH 17TH / NORTH 18TH")
+Neighborhood.create(:name => "SLOUGH CREEK / STILLWATER CREEK / PALLISADE DR")
+Neighborhood.create(:name => "VALLEY COMMONS - FALLON / SOUTH FERGUSON / WEST B")
+Neighborhood.create(:name => "VALLEY COMMONS - FALLON / PRAIRIE / WEST BABCOCK")
+Neighborhood.create(:name => "POND ROW / WEST BABCOCK / DONNA AVE / WHITE OAK")
+Neighborhood.create(:name => "WEST KOCH / SOUTH 2OTH / SOUTH 16TH / SOUTH 15TH")
+Neighborhood.create(:name => "WEST DICKERSON / WILLOWBROOK CONDOS")
+Neighborhood.create(:name => "LOYAL GARDENS SUBDIVISION")
+Neighborhood.create(:name => "MSU STUDENT HOUSING")
+Neighborhood.create(:name => "MSU STUDENT HOUSING")
+Neighborhood.create(:name => "HILL STREET / HIGHLAND / SPRING CREEK")
+Neighborhood.create(:name => "WESTRIDGE NORTH")
+Neighborhood.create(:name => "WESTRIDGE SOUTH")
+Neighborhood.create(:name => "ALDER CREEK SUBDIVISION")
+Neighborhood.create(:name => "WESTFIELD SUBDIVISION NORTH")
+Neighborhood.create(:name => "WAGONWHEEL WEST")
+Neighborhood.create(:name => "GARDENERPARK SUBDIVISION")
+Neighborhood.create(:name => "HITCHING POST SOUTH")
+Neighborhood.create(:name => "SOURDOUGH RIDGE")
+Neighborhood.create(:name => "PAINTED HILLS")
+Neighborhood.create(:name => "HIGHLAND (COMBINE MAPS TO INCLUDE ALL HOMES)")
+Neighborhood.create(:name => "N.PINECREST / N.CEDARVIEW")
+Neighborhood.create(:name => "HOLLY DR - ASH DR")
+Neighborhood.create(:name => "NORTH WALLACE / MENDENHALL / VILLAGE DOWNTOWN")
+Neighborhood.create(:name => "NORTH 8TH & NORTH 9TH")
+Neighborhood.create(:name => "PORTION OF 3RD / 4TH / 5TH / 6TH")
+Neighborhood.create(:name => "EAST PEACH / NORTH GRAND / NORTH BLACK / EAST VIL")
+Neighborhood.create(:name => "WEST PEACH / NORTH 3RD / WEST TAMARACK / NORTH TR")
+Neighborhood.create(:name => "WEST MAIN / NORTH 7TH / WEST VILLARD / NORTH WILLSON")
+Neighborhood.create(:name => "EAST PEACH / NORTH BLACK / TAMARACK / ROUSE")
+Neighborhood.create(:name => "BEALL PARK AREA")
+DELETE / ADD PORTIONS TO MAP
+Neighborhood.create(:name => "EAST PEACH / ROUSE / EAST TAMARACK / FRONT")
+Neighborhood.create(:name => "EAST LAMME / ROUSE / EAST PEACH / NORTH CHURCH")
+Neighborhood.create(:name => "WEST KOCH / SOUTH 15TH / WEST BABCOCK / SOUTH 11TH")
+Neighborhood.create(:name => "WEST COLLEGE / SOUTH / WEST DICKERSON / SOUTH 8TH")
+Neighborhood.create(:name => "STORY / SOUTH 15TH / KOCH / 8TH AVE")
+Neighborhood.create(:name => "WEST OLIVE / NORTH 11TH / WEST MAIN / SOUTH 4TH")
+Neighborhood.create(:name => "WEST KOCH(PORTION OF) / SOTH 11TH / WEST CURTISS")
+Neighborhood.create(:name => "WEST DICKERSON / SOUTH 8TH / WEST STORY")
+Neighborhood.create(:name => "WEST COLLEGE / SOUTH 8TH / WEST ALDERSON")
+Neighborhood.create(:name => "EAST KOCH / SOUTH 3RD / WEST OLIVE / LINDLEY PL")
+Neighborhood.create(:name => "SOUTH WILLSON / SOUTH TRACY")
+Neighborhood.create(:name => "WEST CLEVELAND / SOUTH 8TH / WEST HARRISON")
+Neighborhood.create(:name => "WEST GARFIELD / SOUTH 7TH / ARTHUR / SOUTH WILLSON")
+Neighborhood.create(:name => "WEST GARFIELD / SOUTH WILLSON(BOTH SIDES)")
+Neighborhood.create(:name => "EAST MASON / SOUTH BLACK / EAST CLEVELAND")
+Neighborhood.create(:name => "WEST GRANT / SOUTH 6TH / WEST HAYES / SOUTH WILLS")
+Neighborhood.create(:name => "BONNER LANE / SOUTH ROUSE / EAST BABCOCK")
+Neighborhood.create(:name => "NORTH MEADOW CREEK")
+Neighborhood.create(:name => "WEST FIELDVIEW / EAST FIELDVIEW")
+Neighborhood.create(:name => "WESTGATE SOUTH")
+Neighborhood.create(:name => "HARVEST CREEK SW")
+Neighborhood.create(:name => "HARVEST CREEK NE")
+Neighborhood.create(:name => "HARVEST CREEK - NEW HOLLAND / ANNIE / LILLY")
+Neighborhood.create(:name => "HARVEST CREEK - NEW HOLLAND / MEDIAN / DURHAM")
+Neighborhood.create(:name => "DURSTON MEADOWS - ALLISON CT / CASE CT / HARRIS")
+Neighborhood.create(:name => "BRENTWOOD - WOODLAND / MAPLEWOOD / MOUNTAIN ASH")
+Neighborhood.create(:name => "MINERAL / SANDERS AVE BETWEEN DURSTON & BABCOCK")
+Neighborhood.create(:name => "NORTH YELLOWSTONE BETWEEN DURSTON & BABCOCK / CHO")
+Neighborhood.create(:name => "W BABCOCK  - CAMEAHWAIT ST")
+Neighborhood.create(:name => "W BABCOCK - MICHAEL GROVE AVE")
+Neighborhood.create(:name => "W VILLARD ST - MICHAEL GROVE AVE")
+Neighborhood.create(:name => "WESTERN & NORTH 25TH BETWEEN MENDENHALL & DURSTON")
+Neighborhood.create(:name => "W BABCOCK ST - N 24TH AVE - W BEALL ST")
+Neighborhood.create(:name => "NORTH 19TH(WEST SIDE) - NORTH 20TH / NORTH 21ST")
+Neighborhood.create(:name => "ARNOLD ST - CIRCLE DR")
+Neighborhood.create(:name => "GRAF ST - S 3RD AVE - HENDERSON ST")
+ADD THIS PORTION OF MAP TO MAP #38 ABOVE
+Neighborhood.create(:name => "WAGONWHEEL EAST")
+Neighborhood.create(:name => "SUNDANCE SPRINGS SUBDIVISON")
+Neighborhood.create(:name => "S.CEDARVIEW / S.SPRUCE")
+Neighborhood.create(:name => "OCONNEL DR - KENYON DR")
+Neighborhood.create(:name => "CHERRY DRIVE / FIRCREST / ASH / MAPLE / HOLLY DR")
+Neighborhood.create(:name => "BOZEMAN TRAIL")
+Neighborhood.create(:name => "BOGART NEIGHBORHOOD")
+Neighborhood.create(:name => "NORTH 1OTH & NORTH 11TH")
+DELETE / ADD PORTIONS TO MAP 67
+Neighborhood.create(:name => "VILLAGE DOWNTOWN")
+Neighborhood.create(:name => "WEST KOCH / SOUTH 15TH / WEST BABCOCK / SOUTH 11TH")
+Neighborhood.create(:name => "EAST ALDERSON / SOUTH BLACK / EAST STORY / DELL")
+Neighborhood.create(:name => "ACCOLA / HOFFMAN / SOUTH ROUSE")
+Neighborhood.create(:name => "KAGY / GREEK WAY / SOUTH 3RD / SOUTH GRAND / WEST")
+Neighborhood.create(:name => "W FIELDVIEW CIR - E FIELDVIEW CIR")
+Neighborhood.create(:name => "ELK GROVE 3")
+Neighborhood.create(:name => "ELK GROVE 2")
+Neighborhood.create(:name => "ELK GROVE 1")
+Neighborhood.create(:name => "W MAGNOLIA DR - N RIVER ROCK DR - THORPE RD")
+Neighborhood.create(:name => "N SHORE DRIVE - SHALLOW BROOK LN - GREEN TREE DR - THORPE RD")
+Neighborhood.create(:name => "W RIVER ROCK RD -  ROYAL RD - ENGBERG LN - SHALLOW BROOK LN")
+Neighborhood.create(:name => "W RIVER ROCK RD - PEBBLE BROOK LN - WEST SHORE DR - W SHORE DR")
+Neighborhood.create(:name => "AMSTERDAM RD -  SIBLEY LN - THORPE RD")
+Neighborhood.create(:name => "SIBLEY LN - WOOSMAN DR - THORPE RD")
+Neighborhood.create(:name => "GOLDEN WEST DR - WESTWOOD DR - CRUISER LN")
+Neighborhood.create(:name => "GOLDEN WEST DR - JACKRABBIT LN - CRUISER LN - SPOONER RD")
+Neighborhood.create(:name => "WESTWOOD CORCLE - OAKWOOD DR - JACKRABBIT RD")
+Neighborhood.create(:name => "MAYFAIR DR - JACKRABBIT RD - GOLDEN WEST DR")
+Neighborhood.create(:name => "FRONTAGE RD -  13TH ST - W PARK AVE - 9TH ST")
+Neighborhood.create(:name => "FRONTAGE RD - 9TH ST - W ALLISON AVE -  6TH ST")
+Neighborhood.create(:name => "MCEWEN DR - SPOONER RD -  AL DR")
+Neighborhood.create(:name => "W CENTRAL AVE - JACKRABBIT RD -  TRIPLE CROWN RD - SPOONER RD")
+Neighborhood.create(:name => "W CENTRAL AVE - N HOFFMAN ST - W CAMERON AVE - N WEAVER ST")
+Neighborhood.create(:name => "E CENTRAL AVE - N WEAVER ST - E CAMERON AVE")
+Neighborhood.create(:name => "E ROSEBUD AVE - PRARIE DOG LN - E MADISON AVE")
+Neighborhood.create(:name => "E SILVERBOW AVE - OREGON ST - E NORTHERN PACIFIC AVE")
+Neighborhood.create(:name => "YELLOWSTONE AVE - OREGON ST - E SILVERBOW AVE")
+Neighborhood.create(:name => "STILES AVE - E ROASEBUD AVE -  JEANETTE PL")
+Neighborhood.create(:name => "IDAHO ST - LAS CAMPANAS DR - WYOMING ST")
