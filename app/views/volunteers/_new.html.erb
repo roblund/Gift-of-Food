@@ -24,7 +24,7 @@
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="map_thumb"><%= link_to(image_tag("maps/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
     <% else %>
-      <div class="map_thumb"><%=link_to(image_tag("maps/small/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/%d.png" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
+      <div class="map_thumb"><%=link_to(image_tag("maps/small/%d.jpg" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/%d.jpg" % @volunteer.neighborhood.id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
     <% end %>
   </div>
 

@@ -6,8 +6,11 @@
     </div>
     
     <% if !@volunteer.neighborhood.nil? %>
-      <div class="prepend-4 span-16 append-4 last">
-        <%= image_tag("maps/%d.png" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image") %>
+      <div class="span-24 last">
+        <%= image_tag("maps/%d.jpg" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
+      </div>
+      <div class="span-24 last">
+        <%=link_to "Perma-link to this map", "/volunteers/maps?neighborhood=%d" % @volunteer.neighborhood.id %>
       </div>
       
       <div class="prepend-2 span-20 append-2 last">

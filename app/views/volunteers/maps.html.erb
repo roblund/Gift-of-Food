@@ -1,0 +1,25 @@
+<div class="span-24 last">
+	<% if !@hood.nil? %>
+		<h1>Neighborhood Map</h1>
+    <h4><%= @hood.name %></h4>
+    <div class="prepend-2 span-20 append-2 last">
+      <p>Thank you for volunteering!</p>
+    </div>
+    
+    <div class="span-24 last">
+      <%= image_tag("maps/%d.jpg" % @hood.id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
+    </div>
+    
+    <div class="prepend-2 span-20 append-2 last">
+      <h3>Safety Information:</h3>
+      <p>Be careful crossing busy streets. Watch out for ice on driveways and sidewalks.</p>
+    </div>
+    
+    <%=link_to "Return to the Main Page", :root %>
+  <% else %>
+    <h1>There was an error</h1>
+    <p>We're sorry but it looks like there was an error processing your request.</p>
+    <p><%= @error_message %></p>
+    <p>Thank you.</p>    
+  <% end %>
+</div>

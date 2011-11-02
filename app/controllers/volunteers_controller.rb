@@ -18,7 +18,22 @@ class VolunteersController < ApplicationController
     end
     
     VolunteerMailer.thank_you(@volunteer).deliver
-  
+  end
+
+  def maps
+    #look for the neighborhood url param and then set the neighborhood
+    if !params[:neighborhood].nil?
+      begin
+        #attempt to find the neighborhood
+        @hood = Neighborhood.find(params[:neighborhood])
+      rescue ActiveRecord::RecordNotFound
+        #no neighborhood found
+        @error_message = "Sent in neighborhood not found."
+      end
+    else
+      #no neighborhood found
+      @error_message = "No neighborhood was sent in."
+    end
   end
 
 end
