@@ -59,7 +59,7 @@ Neighborhood.create(:name => "WEST PEACH / NORTH 3RD / WEST TAMARACK / NORTH TR"
 Neighborhood.create(:name => "WEST MAIN / NORTH 7TH / WEST VILLARD / NORTH WILLSON")
 Neighborhood.create(:name => "EAST PEACH / NORTH BLACK / TAMARACK / ROUSE")
 Neighborhood.create(:name => "BEALL PARK AREA")
-DELETE / ADD PORTIONS TO MAP
+Neighborhood.create(:name => "DELETE / ADD PORTIONS TO MAP")
 Neighborhood.create(:name => "EAST PEACH / ROUSE / EAST TAMARACK / FRONT")
 Neighborhood.create(:name => "EAST LAMME / ROUSE / EAST PEACH / NORTH CHURCH")
 Neighborhood.create(:name => "WEST KOCH / SOUTH 15TH / WEST BABCOCK / SOUTH 11TH")
@@ -96,7 +96,7 @@ Neighborhood.create(:name => "W BABCOCK ST - N 24TH AVE - W BEALL ST")
 Neighborhood.create(:name => "NORTH 19TH(WEST SIDE) - NORTH 20TH / NORTH 21ST")
 Neighborhood.create(:name => "ARNOLD ST - CIRCLE DR")
 Neighborhood.create(:name => "GRAF ST - S 3RD AVE - HENDERSON ST")
-ADD THIS PORTION OF MAP TO MAP #38 ABOVE
+Neighborhood.create(:name => "ADD THIS PORTION OF MAP TO MAP #38 ABOVE")
 Neighborhood.create(:name => "WAGONWHEEL EAST")
 Neighborhood.create(:name => "SUNDANCE SPRINGS SUBDIVISON")
 Neighborhood.create(:name => "S.CEDARVIEW / S.SPRUCE")
@@ -105,7 +105,7 @@ Neighborhood.create(:name => "CHERRY DRIVE / FIRCREST / ASH / MAPLE / HOLLY DR")
 Neighborhood.create(:name => "BOZEMAN TRAIL")
 Neighborhood.create(:name => "BOGART NEIGHBORHOOD")
 Neighborhood.create(:name => "NORTH 1OTH & NORTH 11TH")
-DELETE / ADD PORTIONS TO MAP 67
+Neighborhood.create(:name => "DELETE / ADD PORTIONS TO MAP 67")
 Neighborhood.create(:name => "VILLAGE DOWNTOWN")
 Neighborhood.create(:name => "WEST KOCH / SOUTH 15TH / WEST BABCOCK / SOUTH 11TH")
 Neighborhood.create(:name => "EAST ALDERSON / SOUTH BLACK / EAST STORY / DELL")
@@ -136,3 +136,8 @@ Neighborhood.create(:name => "E SILVERBOW AVE - OREGON ST - E NORTHERN PACIFIC A
 Neighborhood.create(:name => "YELLOWSTONE AVE - OREGON ST - E SILVERBOW AVE")
 Neighborhood.create(:name => "STILES AVE - E ROASEBUD AVE -  JEANETTE PL")
 Neighborhood.create(:name => "IDAHO ST - LAS CAMPANAS DR - WYOMING ST")
+
+# run these in the console after running rake db:seed
+# Neighborhood.find(54).delete
+# Neighborhood.find(91).delete
+# Neighborhood.find(100).delete
