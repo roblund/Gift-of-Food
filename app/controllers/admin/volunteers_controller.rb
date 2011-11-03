@@ -24,20 +24,9 @@ class Admin::VolunteersController < ApplicationController
   def update
     @v = Volunteer.find(params[:id])
    
-    team_lead = params[:volunteer].delete(:is_team_lead)
     @v.update_attributes!(params[:volunteer])
-   
-    neighborhood = @v.neighborhood 
-    
-    # if they are the team lead, we need to remove the team lead from params
-    # and update the neighborhood table instead
-    if team_lead
-      neighborhood.team_lead = @v
-      neighborhood.save
-    elsif neighborhood.team_lead.id == @v.id
-      neighborhood.team_lead = nil
-      neighborhood.save
-    end
+    @v.neighborhood.team_lead = @v
+    @v.neighborhood.save
   
     redirect_to admin_volunteers_path
   end
