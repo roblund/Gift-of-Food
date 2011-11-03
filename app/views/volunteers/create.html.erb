@@ -10,7 +10,7 @@
         <%= image_tag("maps/%d.jpg" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
       </div>
       <div class="span-24 last">
-        <%= link_to "Detailed event information", "2012 Volunteer Coordination Plan.docx" %>
+        <%= link_to "Detailed event information document", "2012 Volunteer Coordination Plan.docx" %>
       </div>
       <div class="span-24 last">
         <%= link_to "Perma-link to this map", "/volunteers/maps?neighborhood=%d" % @volunteer.neighborhood.id %>
