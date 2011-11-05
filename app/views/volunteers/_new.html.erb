@@ -10,6 +10,7 @@
     <div class="mobile_check group"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
     <div class="zip_field"><%=v.label :zip, "Zip *" %><%=v.number_field :zip %></div>
     <% if @volunteer.neighborhood_id.nil? %>
+      <div>If you don't see your neighborhood listed below, that is because someone has already signed up to cover it.</div>
       <div class="neighborhood_selector">
         <div><%=v.label :neighborhood_id, "Available Neighborhoods *" %></div>
         <div><%=v.select :neighborhood_id, Neighborhood.where('volunteer_id IS NULL').collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
@@ -21,7 +22,6 @@
   </div>
 
   <div class="prepend-1 span-10 append-1 last">
-    <span>If you don’t see your neighborhood listed below, that is because someone has already signed up to cover it.</span>
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="map_thumb"><%= link_to(image_tag("maps/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
     <% else %>
