@@ -21,6 +21,7 @@
   </div>
 
   <div class="prepend-1 span-10 append-1 last">
+    <span>If you don’t see your neighborhood listed below, that is because someone has already signed up to cover it.</span>
     <% if @volunteer.neighborhood_id.nil? %>
       <div class="map_thumb"><%= link_to(image_tag("maps/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "/assets/maps/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
     <% else %>
