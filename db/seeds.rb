@@ -140,4 +140,6 @@ Neighborhood.create(:name => "IDAHO ST - LAS CAMPANAS DR - WYOMING ST")
 # run these in the console after running rake db:seed
 # Neighborhood.find(54).delete
 # Neighborhood.find(91).delete
+# Neighborhood.find(94).delete
 # Neighborhood.find(100).delete
+# Neighborhood.find(102).delete
