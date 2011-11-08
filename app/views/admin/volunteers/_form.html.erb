@@ -6,7 +6,7 @@
 <div class="span-24 last">
   <div class="neighborhood_selector">
     <div><%=v.label :neighborhood_id, "Neighborhood:" %></div>
-    <div><%=v.select :neighborhood_id, Neighborhood.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
+    <div><%=v.select :neighborhood_id, Neighborhood.order("name ASC").all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
   </div>
 </div>
 <div class="span-4"><%=v.submit "Save" %></div>

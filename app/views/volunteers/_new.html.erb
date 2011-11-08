@@ -13,7 +13,7 @@
       <div>If you don't see your neighborhood listed below, that is because someone has already signed up to cover it.</div>
       <div class="neighborhood_selector">
         <div><%=v.label :neighborhood_id, "Available Neighborhoods *" %></div>
-        <div><%=v.select :neighborhood_id, Neighborhood.where('volunteer_id IS NULL').collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
+        <div><%=v.select :neighborhood_id, Neighborhood.where('volunteer_id IS NULL').order("name ASC").collect {|p| [ p.name, p.id ] }, {:include_blank => true} %></div>
       </div>
     <% else %>
       <div><span class="assigned_label">Team Leader:</span>&nbsp;##insert team lead here##</div>
