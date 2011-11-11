@@ -8,6 +8,7 @@
     <th>Zip</th>
     <th>Phone</th>
     <th>Neighborhood</th>
+    <th>Signed Up Date</th>
   </tr>
   <% @volunteers.each do |v| %>
     <tr>
@@ -17,9 +18,9 @@
       <td><%=v.zip %></td>
       <td>
         <% if v.is_mobile? %>
-          Mobile: <%=v.phone %>
+          M: <%=v.phone %>
         <% else %>
-          Landline: <%=v.phone %>
+          L: <%=v.phone %>
         <% end %>
       </td>
       <td>
@@ -27,6 +28,7 @@
           <%=v.neighborhood.name %>
         <% end %>
       </td>
+      <td><%=v.created_at.strftime('%m-%d-%Y %H:%M:%S') %></td>
       <td><%=link_to "Edit", edit_admin_volunteer_path(v) %>&nbsp;|&nbsp;<%=link_to "Delete", admin_volunteer_path(v), :method => 'delete' %></td>
     </tr>
   <% end %>

@@ -5,7 +5,7 @@ class Admin::VolunteersController < ApplicationController
   require 'fastercsv'
 
   def index
-    @volunteers = Volunteer.order('last_name DESC').all
+    @volunteers = Volunteer.order('created_at ASC').all
     
     respond_to do |format|
       format.html
