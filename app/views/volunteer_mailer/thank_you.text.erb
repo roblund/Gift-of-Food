@@ -1,11 +1,13 @@
 You're signed up!
 ===============================================
 Thank you for volunteering for The Gift of Food 2011. Please expect to receive some emails in the coming weeks that provide further detail about the event. We will inform you of your drop-off locations. We will also let you know where you can pick up your bags. If you have questions about the event or have questions about your map please feel free to email us at info@thegiftoffood.org. Good luck putting together a team.
+
+Sign-up and share this event on Facebook! - https://www.facebook.com/event.php?eid=309118829100787
     
 Thanks!
 
 <% if !@volunteer.neighborhood.nil? %>
-	<p>Map: <a href="http://thegiftoffood.org/volunteers/maps?neighborhood=<%=@volunteer.neighborhood.id %>"><%=@volunteer.neighborhood.name %></a></p>
+	Map: <%=@volunteer.neighborhood.name %> - http://thegiftoffood.org/volunteers/maps?neighborhood=<%=@volunteer.neighborhood.id %>
 <% end %>
 
 First of all, we would like to thank you for your dedication and commitment to this exciting event. We are looking forward the second Annual Gift of Food Holiday Food Drive and hope to achieve our goal of raising 45,000 pounds of food!   Below is a detailed outline of what to expect related to the event:
