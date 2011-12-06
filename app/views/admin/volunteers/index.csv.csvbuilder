@@ -7,7 +7,7 @@ csv << ["Last Name", "First Name", "Email", "Phone", "Is Mobile?", "Zip", "Neigh
 
 row_data = [] # for scoping
 Neighborhood.all.each do |v|
-  if !v.team_lead.nil? do
+  if !v.team_lead.nil?
     row_data = [
                  v.team_lead.last_name,
                  v.team_lead.first_name,
