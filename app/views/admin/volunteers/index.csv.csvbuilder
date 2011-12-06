@@ -3,7 +3,7 @@ csv << ["Gift of Food Volunteers"]
 csv << [] # gap between header and data for visibility
 
 # header-row for the data
-csv << ["Last Name", "First Name", "Email", "Phone", "Is Mobile?", "Zip", "Neighborhood","Signed Up Date"]
+csv << ["Last Name", "First Name", "Email", "Phone", "Is Mobile?", "Zip", "Neighborhood","Signed Up Date","Map URL"]
 
 row_data = [] # for scoping
 @volunteers.each do |v|
@@ -15,7 +15,8 @@ row_data = [] # for scoping
                v.is_mobile,
                v.zip,
                v.neighborhood.name,
-               v.created_at.strftime('%m-%d-%Y %H:%M:%S')
+               v.created_at.strftime('%m-%d-%Y %H:%M:%S'),
+               "http://thegiftoffood.org/volunteers/maps?neighborhood=#{v.neighborhood.id}" 
              ]
   # and don't forget to add the row to the csv
   csv << row_data.dup # it breaks if you don't dup
