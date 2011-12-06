@@ -3,7 +3,7 @@ csv << ["Gift of Food Volunteers"]
 csv << [] # gap between header and data for visibility
 
 # header-row for the data
-csv << ["Last Name", "First Name", "Email", "Phone", "Is Mobile?", "Zip", "Neighborhood","Signed Up Date","Map URL"]
+csv << ["Last Name","First Name","Email","Phone","Is Mobile?","Zip","Signed Up Date","Neighborhood","Map URL"]
 
 row_data = [] # for scoping
 Neighborhood.all.each do |v|
