@@ -3,20 +3,35 @@ csv << ["Gift of Food Volunteers"]
 csv << [] # gap between header and data for visibility
 
 # header-row for the data
-csv << ["Last Name", "First Name", "Email", "Phone", "Is Mobile?", "Zip", "Neighborhood","Signed Up Date"]
+csv << ["Last Name","First Name","Email","Phone","Is Mobile?","Zip","Signed Up Date","Neighborhood","Map URL"]
 
 row_data = [] # for scoping
-@volunteers.each do |v|
-  row_data = [
-               v.last_name,
-               v.first_name,
-               v.email,
-               v.phone.to_s,
-               v.is_mobile,
-               v.zip,
-               v.neighborhood.name,
-               v.created_at.strftime('%m-%d-%Y %H:%M:%S')
-             ]
+Neighborhood.all.each do |v|
+  if !v.team_lead.nil?
+    row_data = [
+                 v.team_lead.last_name,
+                 v.team_lead.first_name,
+                 v.team_lead.email,
+                 v.team_lead.phone.to_s,
+                 v.team_lead.is_mobile,
+                 v.team_lead.zip,
+                 v.team_lead.created_at.strftime('%m-%d-%Y %H:%M:%S'),
+                 v.name,
+                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{v.id}" 
+               ]
+  else
+    row_data = [
+                 '',
+                 '',
+                 '',
+                 '',
+                 '',
+                 '',
+                 '',
+                 v.name,
+                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{v.id}" 
+               ]
+  end
   # and don't forget to add the row to the csv
   csv << row_data.dup # it breaks if you don't dup
 end
