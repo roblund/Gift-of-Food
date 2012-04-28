@@ -9,7 +9,7 @@
     
     <% if !@volunteer.neighborhood.nil? %>
       <div class="span-24 last">
-        <%= image_tag("maps/%d.jpg" % @volunteer.neighborhood.id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
+        <%= image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/maps/%d.jpg" % @volunteer.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
       </div>
       <div class="span-24 last">
         <%= link_to "Detailed event information document", "/2012 Volunteer Coordination Plan.docx" %>
