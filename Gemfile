@@ -22,4 +22,5 @@ gem 'json'
 gem 'jquery-rails'
 gem 'fastercsv'
 gem 'csv_builder'
+gem 'blueprint-rails'
 
