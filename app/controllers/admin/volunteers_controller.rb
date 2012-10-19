@@ -1,6 +1,10 @@
 class Admin::VolunteersController < ApplicationController
 
-  http_basic_authenticate_with :name => "frodo", :password => "thering"
+  if Rails.env.production?
+    http_basic_authenticate_with :name => ENV['GOF_USERNAME'], :password => ENV['GOF_SECRET']
+  else
+    http_basic_authenticate_with :name => "frodo", :password => "thering"
+  end
 
   require 'fastercsv'
 
