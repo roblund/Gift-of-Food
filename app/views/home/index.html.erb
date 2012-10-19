@@ -4,17 +4,17 @@
 
 <div class="span-12 last">
 	<ul id="event_info">
-		<li><span>When:</span>December 10, 2011</li>
+		<li><span>When:</span>December 8, 2012</li>
 		<li><span>Time:</span>10am - Noon</li>
 		<li><span>Where:</span>Bozeman and Belgrade, Montana</li>
-		<li><span>Goal:</span>500 volunteers to collect 45,000 pounds of food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
+		<li><span>Goal:</span>500 volunteers to collect 25,000 pounds of food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
 	</ul>
 </div>
 
 <div class="span-24 last">
 	<h2>Come Join Us</h2>
 	<div class="prepend-2 span-20 append-2 last">
-		<p>Invite your family and friends to join you on a crisp December day of giving back to your community. In its first year, 2010, the event raised 14,000 pounds of food and $2,000 for the Gallatin Valley Food Bank. In our efforts to support the Food Bank’s need to support a growing number of families in the Gallatin County, we have set our sights on becoming the Valley's biggest food drive by tripling our impact and raising 45,000 pounds of food this year. A contribution of this size will go far to support the over 1,200 local families that receive emergency food boxes each month. Our efforts are timed to help stock the shelves through the winter and to compliment the US Postal Service food drive that occurs in April and the "Can the Griz" and "Huffing for Stuffing" events that occur in the Fall each year.</p>
+		<p>Invite your family and friends to join you on a crisp December day of giving back to your community. In its first year, 2010, the event raised 14,000 pounds of food and $2,000 for the Gallatin Valley Food Bank. In our efforts to support the Food Bank’s need to support a growing number of families in the Gallatin County, we have set our sights on becoming the Valley's biggest food drive by increasing our impact and raising 25,000 pounds of food this year. A contribution of this size will go far to support the over 1,200 local families that receive emergency food boxes each month. Our efforts are timed to help stock the shelves through the winter and to compliment the US Postal Service food drive that occurs in April and the "Can the Griz" and "Huffing for Stuffing" events that occur in the Fall each year.</p>
 		<p>Please help us spread the word about this event! Post it on your Facebook, friend the event, tweet it, yell it, whisper it, do whatever you can to help us reach our audacious goals to help the Food Bank this winter!</p>
 	</div>
   
@@ -43,7 +43,7 @@
 	<h2>Volunteer</h2>
 	<div class="prepend-2 span-20 append-2 last">
     <h3><%=@volCount%>/130 volunteer teams = <%=number_to_percentage(@volPercent,:precision => 0)%> of our goal</h3><br />
-		<p>We need your help raising 45,000 pounds of food, one bag at a time! Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
+		<p>We need your help raising 25,000 pounds of food, one bag at a time! Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
 
 		<p>Here is a summary of what we are asking you to do:</p>
 
@@ -66,18 +66,15 @@
 <div class="span-24 last">
 	<h2>Principal Sponsors</h2>
 	<div class="prepend-2 span-20 append-2 last">
-		<p>The event is brought to you by the generous support of <%= link_to "Cardinal Distributing", "http://www.cardinaldistributing.com", :target => "_blank" %>, <%= link_to "Big Sky Western Bank", "https://www.bigskybank.com", :target => "_blank" %>, <%= link_to "RightNow Technologies", "http://rightnow.com", :target => "_blank" %>, and <%= link_to "KBZK", "http://www.kbzk.com", :target => "_blank" %> in conjunction with the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %>.</p>
+		<p>The event is brought to you by the generous support of <%= link_to "Cardinal Distributing", "http://www.cardinaldistributing.com", :target => "_blank" %>, <%= link_to "Big Sky Western Bank", "https://www.bigskybank.com", :target => "_blank" %>, and <%= link_to "KBZK", "http://www.kbzk.com", :target => "_blank" %> in conjunction with the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %>.</p>
 	</div>
-	<div class="prepend-1 span-4 append-1">
+	<div class="prepend-3 span-4 append-1">
 		<%= link_to(image_tag('bigskywb.jpg', :alt => "Big Sky Western Bank Logo", :class => "sponsor_image"), "https://www.bigskybank.com", :target => "_blank") %>
-	</div>
-	<div class="prepend-1 span-4 append-1">
-		<%= link_to(image_tag('rightnow.jpg', :alt => "RightNow Logo", :class => "sponsor_image"), "http://rightnow.com", :target => "_blank") %>
 	</div>
 	<div class="prepend-1 span-4 append-1">
 		<%= link_to(image_tag('cardinal.jpg', :alt => "Cardinal Distributing Logo", :class => "sponsor_image"), "http://www.cardinaldistributing.com", :target => "_blank") %>
 	</div>
-	<div class="prepend-1 span-4 append-1 last">
+	<div class="prepend-1 span-4 append-3 last">
     <%= link_to(image_tag('kbzk.png', :alt => "KBZK Logo", :class => "sponsor_image"), "http://www.kbzk.com", :target => "_blank") %>
 	</div>
 </div>
