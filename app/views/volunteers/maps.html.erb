@@ -2,21 +2,21 @@
 	<% if !@hood.nil? %>
 		<h1>Neighborhood Map</h1>
     <h4><%= @hood.name %></h4>
-    <div class="prepend-2 span-20 append-2 last">
+    <div class="prepend-2 span-20 append-2">
       <p>Thank you for volunteering! <%= link_to "Detailed event information document", "/2012 Volunteer Coordination Plan.docx" %></p>
       <p></p>
     </div>
     
     <div class="span-24 last">
-      <%= image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/maps/%d.jpg" % @hood.file_id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
+      <%= image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/%s.jpg" % @hood.file_id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
     </div>
     
-    <div class="prepend-2 span-20 append-2 last">
+    <div class="prepend-2 span-20 append-2">
       <h3>Safety Information:</h3>
       <p>Be careful crossing busy streets. Watch out for ice on driveways and sidewalks.</p>
     </div>
     
-    <%=link_to "Return to the Main Page", :root %>
+    <div class="span-24"><%=link_to "Return to the Main Page", :root %></div>
   <% else %>
     <h1>There was an error</h1>
     <p>We're sorry but it looks like there was an error processing your request.</p>

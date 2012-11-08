@@ -1,7 +1,7 @@
 <div class="span-24 last">
   <% if @volunteer.valid? %>
     <h1>Thank You</h1>
-    <div class="prepend-2 span-20 append-2 last">
+    <div class="prepend-2 span-20 append-2">
       <p>Thank you for volunteering! Watch your email inbox for a confirmation email and further instructions. We look foward to seeing everybody on December 8th.</p>
 
       <p><a href="https://www.facebook.com/event.php?eid=309118829100787">Sign-up and share this event on Facebook!</a></p>
@@ -9,7 +9,7 @@
     
     <% if !@volunteer.neighborhood.nil? %>
       <div class="span-24 last">
-        <%= image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/maps/%d.jpg" % @volunteer.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
+        <%= image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/%s.jpg" % @volunteer.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
       </div>
       <div class="span-24 last">
         <%= link_to "Detailed event information document", "/2012 Volunteer Coordination Plan.docx" %>
@@ -18,13 +18,13 @@
         <%= link_to "Perma-link to this map", "/volunteers/maps?neighborhood=%d" % @volunteer.neighborhood.id %>
       </div>
       
-      <div class="prepend-2 span-20 append-2 last">
+      <div class="prepend-2 span-20 append-2">
         <h3>Safety Information:</h3>
         <p>Be careful crossing busy streets. Watch out for ice on driveways and sidewalks.</p>
       </div>
     <% end %>
     
-    <%=link_to "Return to the Main Page", :root %>
+    <div class="span-24"><%=link_to "Return to the Main Page", :root %></div>
   <% else %>
     <h1>There was an error</h1>
     <div class="errors_list">

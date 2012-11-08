@@ -26,12 +26,12 @@
       <% if @volunteer.neighborhood_id.nil? %>
         <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
       <% else %>
-        <div class="map_thumb"><%=link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/%d.jpg" % @volunteer.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/maps/%d.jpg" % @volunteer.neighborhood.file_id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
+        <div class="map_thumb"><%=link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/%s.jpg" % @volunteer.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/%s.jpg" % @volunteer.neighborhood.file_id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
       <% end %>
     </div>
   </div>
 
   <div class="prepend-3 span-6 last">
-    <%=v.submit "Volunteer!", :disabled => true %>
+    <%=v.submit "Volunteer!" %>
   </div>
 <% end %>
