@@ -1,21 +1,18 @@
 <h1>Volunteer Team Leads</h1>
 
-<table>
+<table class="no-zebra">
   <tr>
     <th>Last Name</th>
     <th>First Name</th>
     <th>Email</th>
-    <th>Zip</th>
     <th>Phone</th>
     <th>Neighborhood</th>
-    <th>Signed Up Date</th>
   </tr>
   <% @volunteers.each do |v| %>
     <tr>
       <td><%=v.last_name %></td>
       <td><%=v.first_name %></td>
       <td><%=mail_to v.email %></td>
-      <td><%=v.zip %></td>
       <td>
         <% if v.is_mobile? %>
           M: <%=v.phone %>
@@ -28,7 +25,6 @@
           <%=v.neighborhood.name %>
         <% end %>
       </td>
-      <td><%=v.created_at.strftime('%m-%d-%Y %H:%M:%S') %></td>
       <td><%=link_to "Edit", edit_admin_volunteer_path(v) %>&nbsp;|&nbsp;<%=link_to "Delete", admin_volunteer_path(v), :method => 'delete' %></td>
     </tr>
   <% end %>

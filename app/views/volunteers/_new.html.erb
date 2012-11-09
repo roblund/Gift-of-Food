@@ -9,7 +9,6 @@
       <div><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
       <div><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %></div>
       <div class="mobile_check group"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
-      <div class="zip_field"><%=v.label :zip, "Zip *" %><%=v.number_field :zip %></div>
       <% if @volunteer.neighborhood_id.nil? %>
         <div>If you don't see your neighborhood listed below, that is because someone has already signed up to cover it.</div>
         <div class="neighborhood_selector">
