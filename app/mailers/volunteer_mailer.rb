@@ -3,7 +3,7 @@ class VolunteerMailer < ActionMailer::Base
 
   def thank_you(volunteer)
     @volunteer = volunteer
-    mail(:to => volunteer.email, :subject => "Thank you for volunteering for the Gift of Food!")
+    mail(:to => volunteer.email, :from => "info@thegiftoffood.org", :subject => "Thank you for volunteering for the Gift of Food!")
   end
 
 end
