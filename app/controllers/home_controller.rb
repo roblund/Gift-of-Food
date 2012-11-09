@@ -20,7 +20,7 @@ class HomeController < ApplicationController
 
     # 26/130 volunteers = 20% to our goal.
     @volCount = Volunteer.all.count
-    @volPercent = (@volCount.to_f/130)*100
+    @volPercent = (@volCount.to_f/125)*100
 
   end
 
