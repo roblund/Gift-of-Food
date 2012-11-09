@@ -29,7 +29,7 @@ class Admin::VolunteersController < ApplicationController
     @v = Volunteer.find(params[:id])
     @v.neighborhood.team_lead = nil
     @v.neighborhood.save
-    @v.update_attributes!(params[:volunteer])
+    @v.update_attributes(params[:volunteer])
     @v.neighborhood.team_lead = @v
     @v.neighborhood.save
   
