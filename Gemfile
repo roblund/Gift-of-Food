@@ -18,7 +18,7 @@ group :production do
 end
 
 gem 'json'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.1.4'
 gem 'fastercsv'
 gem 'csv_builder'
 gem 'blueprint-rails'
