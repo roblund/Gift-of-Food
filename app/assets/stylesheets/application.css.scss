@@ -5,7 +5,7 @@
  *= require blueprint
  *= require_self
  *= require_tree .
- *= require colorbox
+ *= require colorbox-rails
 */
 
 @mixin box_shadow($offset, $size) {

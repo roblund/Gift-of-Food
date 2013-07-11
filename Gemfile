@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+ruby '2.0.0'
 gem 'rails', '3.2.11'
 
 group :assets do
@@ -22,4 +23,5 @@ gem 'jquery-rails', '~> 2.1.4'
 gem 'fastercsv'
 gem 'csv_builder'
 gem 'blueprint-rails'
+gem 'colorbox-rails'
 
