@@ -10,7 +10,8 @@ class Admin::VolunteersController < ApplicationController
 
   def index
     @volunteers = Volunteer.order('created_at ASC').all
-    
+    @uniq_emails = Volunteer.uniq.pluck(:email)
+
     respond_to do |format|
       format.html
       format.csv do
@@ -32,7 +33,7 @@ class Admin::VolunteersController < ApplicationController
     @v.update_attributes!(params[:volunteer])
     @v.neighborhood.team_lead = @v
     @v.neighborhood.save
-  
+
     redirect_to admin_volunteers_path
   end
 

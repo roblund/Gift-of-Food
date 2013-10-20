@@ -30,4 +30,9 @@
   <% end %>
 </table>
 
+<div class="unique_emails span-24 last">
+    <h4>Email Addresses (remember to use BCC):</h4>
+    <textarea class="span-24 last"><%= @uniq_emails * "; " %></textarea>
+</div>
+
 <%=link_to "Download list as CSV", "/admin/volunteers.csv" %>
