@@ -59,3 +59,41 @@ ul li {
     margin-bottom:20px;
     color:#851C16;
 }
+.donate {
+  text-align:center;
+
+  input[type="submit"] {
+      border-top: 1px solid #757575;
+      background: #7f111a;
+      background: -webkit-gradient(linear, left top, left bottom, from(#813535), to(#7f111a));
+      background: -webkit-linear-gradient(top, #813535, #7f111a);
+      background: -moz-linear-gradient(top, #813535, #7f111a);
+      background: -ms-linear-gradient(top, #813535, #7f111a);
+      background: -o-linear-gradient(top, #813535, #7f111a);
+      padding: 16px 0;
+      margin:10px 0 20px 0;
+      width:100%;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+      -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+      box-shadow: rgba(0,0,0,1) 0 1px 0;
+      text-shadow: rgba(0,0,0,.4) 0 1px 0;
+      color: white;
+      font-size: 17px;
+      font-family: Helvetica, Arial, Sans-Serif;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor:pointer;
+  }
+  input[type="submit"]:hover {
+     border-top-color: #813535;
+     background: #813535;
+     color: #b5b5b5;
+  }
+  input[type="submit"]:active {
+     border-top-color: #1b435e;
+     background: #1b435e;
+  }
+}

@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-
     @volunteer = Volunteer.new
 
     #look for the neighborhood url param and then preset the neighborhood
@@ -21,7 +20,9 @@ class HomeController < ApplicationController
     # 26/130 volunteers = 20% to our goal.
     @volCount = Volunteer.all.count
     @volPercent = (@volCount.to_f/125)*100
+  end
 
+  def donate
   end
 
 end

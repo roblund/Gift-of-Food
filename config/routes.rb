@@ -5,7 +5,8 @@ Giftoffood::Application.routes.draw do
   resource :volunteers, :only => [:new,:create] do
   end
 
-  match "/volunteers/maps" => "volunteers#maps"
+  get "/donate" => "home#donate"
+  get "/volunteers/maps" => "volunteers#maps"
 
   namespace :admin do
     root :to => 'volunteers#index'
