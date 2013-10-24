@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .edit_volunteer {
     margin-bottom:10px;
-    
+
     label {
         display:inline-block;
         width:100px;
@@ -81,5 +81,10 @@
     .cancel {
         margin-top:25px;
         display:block;
+    }
+    .delete_link {
+        display:block;
+        padding-top:15px;
+        font-size:0.7em;
     }
 }

@@ -2,6 +2,7 @@
 <div class="span-24 last"><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
 <div class="span-24 last"><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
 <div class="span-24 last"><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %><span class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Mobile?" %></span></div>
+<div class="span-24 last"><%=v.label :company, "Company" %><%=v.text_field :company %></div>
 <div class="span-24 last">
   <div class="neighborhood_selector">
     <div><%=v.label :neighborhood_id, "Neighborhood:" %></div>
@@ -10,3 +11,4 @@
 </div>
 <div class="span-4"><%=v.submit "Save" %></div>
 <div class="span-4 append-16 last"><%=link_to "Cancel", admin_volunteers_path, :class => "cancel" %></div>
+<div class="span-24 last"><%=link_to "[Delete This Volunteer]", admin_volunteer_path(@volunteer), method: 'delete', class: "delete_link", data: { confirm: "Are you sure you want to delete this volunteer?" } %></div>

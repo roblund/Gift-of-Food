@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108161849) do
+ActiveRecord::Schema.define(:version => 20131024001846) do
 
   create_table "neighborhoods", :force => true do |t|
     t.datetime "created_at",   :null => false
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20121108161849) do
     t.string   "phone"
     t.boolean  "is_mobile"
     t.integer  "neighborhood_id"
+    t.string   "company"
   end
 
 end

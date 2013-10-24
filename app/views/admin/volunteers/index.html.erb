@@ -2,16 +2,15 @@
 
 <table class="no-zebra">
   <tr>
-    <th>Last Name</th>
-    <th>First Name</th>
+    <th>Name</th>
     <th>Email</th>
     <th>Phone</th>
+    <th>Company</th>
     <th>Neighborhood</th>
   </tr>
   <% @volunteers.each do |v| %>
     <tr>
-      <td><%=v.last_name %></td>
-      <td><%=v.first_name %></td>
+      <td><%=link_to v.last_name + ', ' + v.first_name, edit_admin_volunteer_path(v) %></td>
       <td><%=mail_to v.email %></td>
       <td>
         <% if v.is_mobile? %>
@@ -20,12 +19,12 @@
           L: <%=v.phone %>
         <% end %>
       </td>
+      <td><%=v.company %></td>
       <td>
         <% if !v.neighborhood.nil? %>
           <%=v.neighborhood.name %>
         <% end %>
       </td>
-      <td><%=link_to "Edit", edit_admin_volunteer_path(v) %>&nbsp;|&nbsp;<%=link_to "Delete", admin_volunteer_path(v), :method => 'delete' %></td>
     </tr>
   <% end %>
 </table>
