@@ -40,11 +40,16 @@
 </div>
 
 <div class="span-24 last">
-	<h2>Volunteer</h2>
+	<h2>Volunteer or Donate</h2>
 	<div class="prepend-2 span-20 append-2 last">
-    <h3><%=@volCount%>/125 volunteer teams = <%=number_to_percentage(@volPercent,:precision => 0)%> of our goal</h3><br />
+    <h3><%=@volCount%>/125 volunteer teams = <%=number_to_percentage(@volPercent,:precision => 0)%> of our goal</h3><br/>
 		<p>We need your help raising 25,000 pounds of food, one bag at a time! Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
 
+    <h3>To Donate:</h3>
+    <p>If you would like to help this year with a monetary donation we now are accepting donations through the Gallatin Valley Food Bank's secure site.</p>
+    <p><%= link_to 'Donate to the Food Bank', donate_path, :class => "donate_link" %></p>
+
+    <h3>To Volunteer:</h3>
 		<p>Here is a summary of what we are asking you to do:</p>
 
 		<ol>
@@ -59,7 +64,7 @@
 		<p>Please complete the form below to volunteer! Many thanks.</p>
 	</div>
 	<div class="span-24 last">
-		<%=render 'volunteers/new' %>
+		<%= render 'volunteers/new' %>
 	</div>
 </div>
 

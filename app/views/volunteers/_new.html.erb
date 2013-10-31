@@ -1,6 +1,6 @@
 <%=form_for @volunteer, :html => { :class => "new_volunteer group" } do  |v| %>
   <div class="span-24 last">
-    <div class="span-12 last">
+    <div class="span-12">
       <% if !@error_message.nil? %>
         <div class="error_message"><%= @error_message %></div>
       <% end %>
@@ -14,7 +14,7 @@
         <div>If you don't see your neighborhood listed below, that is because someone has already signed up to cover it.</div>
         <div class="neighborhood_selector">
           <div><%=v.label :neighborhood_id, "Available Neighborhoods *" %></div>
-          <div><%=v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true} %></div>
+          <div class="prepend-1 span-10 last"><%=v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true} %></div>
         </div>
       <% else %>
         <div><span class="assigned_label">Team Leader:</span>&nbsp;##insert team lead here##</div>
@@ -22,7 +22,7 @@
       <% end %>
     </div>
 
-    <div class="prepend-1 span-10 append-1 last">
+    <div class="prepend-1 span-11 last">
       <% if @volunteer.neighborhood_id.nil? %>
         <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
       <% else %>
