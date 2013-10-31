@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('.donate input[type="submit"]').click ->
-    _gaq.push(['_trackEvent', 'Donate', 'buttonClick'])
+  $('a.donate').click ->
+    _gaq.push(['_trackEvent', 'Donate', 'buttonClick', 'Sent to Food Bank site'])
