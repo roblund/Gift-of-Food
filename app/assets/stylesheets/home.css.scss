@@ -66,7 +66,8 @@ ul li {
 .donate {
   text-align:center;
 
-  input[type="submit"] {
+  a.donate {
+      display:block;
       border-top: 1px solid #757575;
       background: #7f111a;
       background: -webkit-gradient(linear, left top, left bottom, from(#813535), to(#7f111a));
@@ -91,12 +92,12 @@ ul li {
       vertical-align: middle;
       cursor:pointer;
   }
-  input[type="submit"]:hover {
+  a.donate:hover {
      border-top-color: #813535;
      background: #813535;
      color: #b5b5b5;
   }
-  input[type="submit"]:active {
+  a.donate:active {
      border-top-color: #1b435e;
      background: #1b435e;
   }
