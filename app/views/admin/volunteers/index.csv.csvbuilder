@@ -3,21 +3,23 @@ csv << ["Gift of Food Volunteers"]
 csv << [] # gap between header and data for visibility
 
 # header-row for the data
-csv << ["Last Name","First Name","Email","Phone","Is Mobile?","Zip","Signed Up Date","Neighborhood","Map URL"]
+csv << ["Last Name","First Name","Email","Company","Phone","Is Mobile?","Zip","Signed Up Date","Neighborhood","Drop Location","Map URL"]
 
 row_data = [] # for scoping
-Neighborhood.all.each do |v|
-  if !v.team_lead.nil?
+Neighborhood.all.each do |n|
+  if !n.team_lead.nil?
     row_data = [
-                 v.team_lead.last_name,
-                 v.team_lead.first_name,
-                 v.team_lead.email,
-                 v.team_lead.phone.to_s,
-                 v.team_lead.is_mobile,
-                 v.team_lead.zip,
-                 v.team_lead.created_at.strftime('%m-%d-%Y %H:%M:%S'),
-                 v.name,
-                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{v.id}" 
+                 n.team_lead.last_name,
+                 n.team_lead.first_name,
+                 n.team_lead.email,
+                 n.team_lead.company,
+                 n.team_lead.phone.to_s,
+                 n.team_lead.is_mobile,
+                 n.team_lead.zip,
+                 n.team_lead.created_at.strftime('%m-%d-%Y %H:%M:%S'),
+                 n.name,
+                 @locations[n.drop_location-1],
+                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{n.id}"
                ]
   else
     row_data = [
@@ -28,8 +30,10 @@ Neighborhood.all.each do |v|
                  '',
                  '',
                  '',
-                 v.name,
-                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{v.id}" 
+                 '',
+                 n.name,
+                 @locations[n.drop_location-1],
+                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{n.id}"
                ]
   end
   # and don't forget to add the row to the csv

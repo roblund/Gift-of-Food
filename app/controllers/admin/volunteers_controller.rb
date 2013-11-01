@@ -11,6 +11,7 @@ class Admin::VolunteersController < ApplicationController
   def index
     @volunteers = Volunteer.order('created_at ASC').all
     @uniq_emails = Volunteer.uniq.pluck(:email)
+    @locations = ["Bogert Park", "Home Depot", "MSU Fieldhouse", "Rosauer's", "Belgrade Town Pump"]
 
     respond_to do |format|
       format.html
