@@ -6,7 +6,7 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require jquery.colorbox.min.js
+#= require colorbox-rails
 #= require_tree .
 
 jQuery ->

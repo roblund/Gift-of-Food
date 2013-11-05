@@ -10,8 +10,24 @@ class Admin::VolunteersController < ApplicationController
 
   def index
     @volunteers = Volunteer.order('created_at ASC').all
-    @uniq_emails = Volunteer.uniq.pluck(:email)
-    @locations = ["Bogert Park", "Home Depot", "MSU Fieldhouse", "Rosauer's", "Belgrade Town Pump"]
+    @all_emails = Volunteer.uniq.pluck(:email) * '; '
+    gon.emails = [
+      @all_emails,
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 1).uniq.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 2).uniq.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 3).uniq.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 4).uniq.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 5).uniq.pluck(:email) * '; ',
+    ]
+
+    @locations = [
+      ["All", 0],
+      ["Bogert Park", 1],
+      ["Home Depot", 2],
+      ["MSU Fieldhouse", 3],
+      ["Rosauer's", 4],
+      ["Belgrade Town Pump", 5]
+    ]
 
     respond_to do |format|
       format.html

@@ -24,4 +24,4 @@ gem 'fastercsv'
 gem 'csv_builder'
 gem 'blueprint-rails'
 gem 'colorbox-rails'
-
+gem 'gon'

@@ -26,14 +26,19 @@
           <%=v.neighborhood.name %>
         <% end %>
       </td>
-      <td><%=@locations[v.neighborhood.drop_location-1]%></td>
+      <td><%= @locations[v.neighborhood.drop_location][0] %></td>
     </tr>
   <% end %>
 </table>
 
 <div class="unique_emails span-24 last">
+  <div class="span-12">
     <h4>Email Addresses (remember to use BCC):</h4>
-    <textarea class="span-24 last"><%= @uniq_emails * "; " %></textarea>
+  </div>
+  <div class="drop_location_select span-12 last">
+    <span>Drop Location: </span><%= select_tag "drop_location", options_for_select(@locations) %>
+  </div>
+  <textarea class="span-24 last"><%= @all_emails %></textarea>
 </div>
 
 <%=link_to "Download list as CSV", "/admin/volunteers.csv" %>

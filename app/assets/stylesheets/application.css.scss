@@ -34,6 +34,10 @@ body {
     top: auto;
     width: 1px;
 }
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow,
+#cboxClose {border:0;}
 
 /* Float Clearing - for browsers that support :after*/
 .group:after {
@@ -43,5 +47,3 @@ body {
   clear:both;
   visibility:hidden;
 }
-/* for IE7 */
-*:first-child+html .group{ min-height:1px; }
