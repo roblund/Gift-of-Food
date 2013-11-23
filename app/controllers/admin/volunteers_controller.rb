@@ -1,4 +1,5 @@
 class Admin::VolunteersController < ApplicationController
+  require 'fastercsv'
 
   if Rails.env.production?
     http_basic_authenticate_with :name => ENV['GOF_USERNAME'], :password => ENV['GOF_SECRET']
@@ -6,7 +7,14 @@ class Admin::VolunteersController < ApplicationController
     http_basic_authenticate_with :name => "frodo", :password => "thering"
   end
 
-  require 'fastercsv'
+  @@locations = [
+    ["All", 0],
+    ["Bogert Park", 1],
+    ["Home Depot", 2],
+    ["MSU Fieldhouse", 3],
+    ["Rosauer's", 4],
+    ["Belgrade Town Pump", 5]
+  ]
 
   def index
     @volunteers = Volunteer.order('created_at ASC').all
@@ -20,15 +28,6 @@ class Admin::VolunteersController < ApplicationController
       Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 5).uniq.pluck(:email) * '; ',
     ]
 
-    @locations = [
-      ["All", 0],
-      ["Bogert Park", 1],
-      ["Home Depot", 2],
-      ["MSU Fieldhouse", 3],
-      ["Rosauer's", 4],
-      ["Belgrade Town Pump", 5]
-    ]
-
     respond_to do |format|
       format.html
       format.csv do
@@ -37,6 +36,11 @@ class Admin::VolunteersController < ApplicationController
         @filename = "volunteers_#{@timestamp}.csv"
       end
     end
+  end
+
+  def maps
+    @volunteers = Volunteer.joins(:neighborhood).order(:drop_location)
+    render :layout => 'layouts/map_print'
   end
 
   def edit
@@ -62,6 +66,11 @@ class Admin::VolunteersController < ApplicationController
     end
     v.delete
     redirect_to admin_volunteers_path
+  end
+
+  helper_method :locations
+  def locations
+    @@locations
   end
 
 end

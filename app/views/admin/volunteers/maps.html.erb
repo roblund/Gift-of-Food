@@ -1,0 +1,14 @@
+<% @volunteers.each do |v| %>
+  <div class="page">
+    <h1><%= v.first_name + ' ' + v.last_name %></h1>
+
+    <% if !v.neighborhood.nil? %>
+           <h2><%= v.neighborhood.name %></h2>
+           <h3>Drop Location: <%= locations[v.neighborhood.drop_location][0] %></h3>
+    <% end %>
+
+    <div class="neighborhood_map">
+      <%= image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/%s.jpg" % v.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
+    </div>
+  </div>
+<% end %>

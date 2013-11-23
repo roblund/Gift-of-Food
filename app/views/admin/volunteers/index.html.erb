@@ -26,7 +26,7 @@
           <%=v.neighborhood.name %>
         <% end %>
       </td>
-      <td><%= @locations[v.neighborhood.drop_location][0] %></td>
+      <td><%= locations[v.neighborhood.drop_location][0] %></td>
     </tr>
   <% end %>
 </table>
@@ -36,9 +36,9 @@
     <h4>Email Addresses (remember to use BCC):</h4>
   </div>
   <div class="drop_location_select span-12 last">
-    <span>Drop Location: </span><%= select_tag "drop_location", options_for_select(@locations) %>
+    <span>Drop Location: </span><%= select_tag "drop_location", options_for_select(locations) %>
   </div>
   <textarea class="span-24 last"><%= @all_emails %></textarea>
 </div>
 
-<%=link_to "Download list as CSV", "/admin/volunteers.csv" %>
+<div class="span-24 last"><%=link_to "Download list as CSV", "/admin/volunteers.csv" %>&nbsp;|&nbsp;<%=link_to "Print map with volunteer names", admin_volunteers_maps_path %></div>
