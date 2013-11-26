@@ -1,6 +1,6 @@
 Neighborhood.create(name: "Cattail North", file_id: "2012_1", drop_location: 2)
 Neighborhood.create(name: "Cattail South", file_id: "2012_2", drop_location: 2)
-Neighborhood.create(name: "Baxter Ln - Harper Pucket - Lolo Way", file_id: "2012_3", drop_location: 2)
+Neighborhood.create(name: "Baxter Ln - Harper Pucket - Equestrian", file_id: "2012_3", drop_location: 2)
 Neighborhood.create(name: "Baxter Ln - N 27th (Brentwood)", file_id: "2012_4", drop_location: 2)
 Neighborhood.create(name: "Westgate North", file_id: "2012_5", drop_location: 2)
 Neighborhood.create(name: "Durston - Rosa - West Oak", file_id: "2012_6", drop_location: 2)
@@ -123,3 +123,4 @@ Neighborhood.create(name: "Idaho - Las Campanas - Wyoming", file_id: "2012_125",
 Neighborhood.create(name: "Meadowbrook Estates South", file_id: "2012_127", drop_location: 4)
 Neighborhood.create(name: "Meadowbrook Estates North", file_id: "2012_128", drop_location: 4)
 Neighborhood.create(name: "Middle Creek", file_id: "2012_129", drop_location: 4)
+Neighborhood.create(name: "Equestrian - Lasso - Kimberwicke", file_id: "2013_130", drop_location: 2)
