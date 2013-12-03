@@ -18,7 +18,7 @@ Neighborhood.all.each do |n|
                  n.team_lead.zip,
                  n.team_lead.created_at.strftime('%m-%d-%Y %H:%M:%S'),
                  n.name,
-                 @locations[n.drop_location-1],
+                 locations[n.drop_location][0],
                  "http://thegiftoffood.org/volunteers/maps?neighborhood=#{n.id}"
                ]
   else
@@ -32,7 +32,7 @@ Neighborhood.all.each do |n|
                  '',
                  '',
                  n.name,
-                 @locations[n.drop_location-1],
+                 locations[n.drop_location][0],
                  "http://thegiftoffood.org/volunteers/maps?neighborhood=#{n.id}"
                ]
   end
