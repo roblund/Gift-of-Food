@@ -1,11 +1,8 @@
 class VolunteersController < ApplicationController
 
   def new
-    @volunteer = volunteer.new
+    @volunteer = Volunteer.new
   end
-
-  def new
-    @volunteer = volunteer.new
 
   def create
     #remove team lead from the params, if sent in
