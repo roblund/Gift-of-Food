@@ -7,9 +7,9 @@ describe Neighborhood do
   end
 
   it "can have its standard fields populated" do
-    @meadows.should be_valid
-    @meadows.name.should eq 'Meadowy Meadows'
-    @meadows.file_id.should eq '2012_1'
-    @meadows.drop_location.should eq 1
+    expect(@meadows).to be_valid
+    expect(@meadows.name).to eq 'Meadowy Meadows'
+    expect(@meadows.file_id).to eq '2012_1'
+    expect(@meadows.drop_location).to eq 1
   end
 end

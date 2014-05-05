@@ -8,7 +8,7 @@ class VolunteersController < ApplicationController
     #remove team lead from the params, if sent in
     team_lead = params[:volunteer].delete(:is_team_lead)
 
-    @volunteer = Volunteer.create(params[:volunteer])
+    @volunteer = Volunteer.create(volunteer_params)
 
     #make sure we don't have any error messages before we try to assign the neighborhood
     if @volunteer.errors.messages.count == 0
@@ -34,6 +34,12 @@ class VolunteersController < ApplicationController
       #no neighborhood found
       @error_message = "No neighborhood was sent in."
     end
+  end
+
+  private
+
+  def volunteer_params
+    params.require(:volunteer).permit(:first_name, :last_name, :email, :phone, :company, :neighborhood_id, :is_mobile)
   end
 
 end

@@ -1,13 +1,11 @@
 source 'http://rubygems.org'
 
-ruby '2.0.0'
-gem 'rails', '3.2.11'
+ruby '2.1.0'
+gem 'rails', '4.1.0'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails', '~> 4.0.3'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
 
 group :test do
   gem 'capybara'
@@ -17,11 +15,12 @@ group :test do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0.0.beta1'
   gem 'factory_girl_rails'
 end
 
 group :development do
+  gem 'spring'
   gem 'sqlite3'
   gem 'debugger'
 end
@@ -30,8 +29,14 @@ group :production do
   gem 'pg'
 end
 
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end
+
 gem 'json'
-gem 'jquery-rails', '~> 2.1.4'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
 gem 'fastercsv'
 gem 'csv_builder'
 gem 'blueprint-rails'

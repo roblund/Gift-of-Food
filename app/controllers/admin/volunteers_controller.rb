@@ -39,7 +39,7 @@ class Admin::VolunteersController < ApplicationController
   end
 
   def maps
-    @volunteers = Volunteer.joins(:neighborhood).order(:drop_location)
+    @volunteers = Volunteer.joins(:neighborhood).order('drop_location')
     render :layout => 'layouts/map_print'
   end
 
