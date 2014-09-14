@@ -14,7 +14,7 @@
     box-shadow:$offset $offset $size #222;
 }
 body {
-    background: asset-path('bg.gif');
+    background: asset-url('bg.gif');
     font-family:Helvetica, Arial, sans-serif;
     font-size:12pt;
 }
