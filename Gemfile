@@ -31,6 +31,7 @@ group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
 
+gem 'unicorn'
 gem 'json'
 gem 'jquery-rails'
 gem 'turbolinks'
