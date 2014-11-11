@@ -1,14 +1,18 @@
-<div class="span-12">
-	<h1><%= image_tag('logo.jpg', :alt => "The Gift of Food") %></h1>
+<div class="span-6">
+	<h1><%= image_tag('sff_logo.jpg', alt: "Spring For Food", width: 200) %></h1>
 </div>
 
-<div class="span-12 last">
+<div class="span-18 last">
 	<ul id="event_info">
-		<li><span>When:</span>December 14th, 2013</li>
+		<li><span>When:</span>April 11th, 2015</li>
 		<li><span>Time:</span>10am - Noon</li>
 		<li><span>Where:</span>Bozeman and Belgrade, Montana</li>
 		<li><span>Goal:</span>500 volunteers to collect 25,000 pounds of food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
 	</ul>
+</div>
+
+<div class="append-5 prepend-5 span-14 last">
+  <%= image_tag('photos/2010-5.jpg', alt: 'Photo from previous food drive', class: 'main_event_photo') %>
 </div>
 
 <div class="span-24 last">
@@ -18,7 +22,7 @@
 		<p>Please help us spread the word about this event! Post it on your Facebook, friend the event, tweet it, yell it, whisper it, do whatever you can to help us reach our audacious goals to help the Food Bank this winter!</p>
 	</div>
 
-  <div class="span-4">
+  <div class="prepend-2 span-4">
     <%= link_to(image_tag("photos/thumbs/2010-1.jpg", :alt => "Photo from 2010", :class => "event_photo"), "/assets/photos/2010-1.jpg", :class => 'photo_link', :rel => '2010Photos') %>
   </div>
   <div class="span-4">
@@ -30,13 +34,9 @@
   <div class="span-4">
     <%= link_to(image_tag("photos/thumbs/2010-4.jpg", :alt => "Photo from 2010", :class => "event_photo"), "/assets/photos/2010-4.jpg", :class => 'photo_link', :rel => '2010Photos') %>
   </div>
-  <div class="span-4">
-    <%= link_to(image_tag("photos/thumbs/2010-5.jpg", :alt => "Photo from 2010", :class => "event_photo"), "/assets/photos/2010-5.jpg", :class => 'photo_link', :rel => '2010Photos') %>
-  </div>
-  <div class="span-4 last">
+  <div class="span-4 append-2 last">
     <%= link_to(image_tag("photos/thumbs/2010-6.jpg", :alt => "Photo from 2010", :class => "event_photo"), "/assets/photos/2010-6.jpg", :class => 'photo_link', :rel => '2010Photos') %>
   </div>
-
 </div>
 
 <div class="span-24 last">
@@ -81,34 +81,6 @@
 	</div>
 	<div class="prepend-1 span-4 append-3 last">
     <%= link_to(image_tag('kbzk.png', :alt => "KBZK Logo", :class => "sponsor_image"), "http://www.kbzk.com", :target => "_blank") %>
-	</div>
-</div>
-
-<div class="span-24 last">
-	<h3>Supporting Sponsors</h3>
-	<div class="prepend-2 span-20 append-2 last">
-		<p>We would also like to thank A.T. Patterson Design, <%= link_to "AgileTask", "https://agiletask.me", :target => "_blank" %>, <%= link_to "Rosauers", "http://www.rosauers.com", :target => "_blank" %>, <%= link_to "Prudential MT", "http://www.prumt.com", :target => "_blank" %>, and <%= link_to "Jim Harris Photography", "http://www.jrharrisphoto.com", :target => "_blank" %> for their support.</p>
-	</div>
-	<div class="prepend-3 span-4 append-1">
-		<%= link_to(image_tag('agiletask.png', :alt => "AgileTask Logo", :class => "sponsor_image"), "https://agiletask.me", :target => "_blank") %>
-	</div>
-	<div class="prepend-1 span-4 append-1">
-    <div class="non-logo">
-      A.T.<br />
-      Patterson<br />
-      Design
-    </div>
-	</div>
-  <div class="prepend-1 span-4 append-3">
-    <%= link_to(image_tag('prumt.jpg', :alt => "Prudential MT Logo", :class => "sponsor_image"), "http://www.prumt.com", :target => "_blank") %>
-  </div>
-	<div class="prepend-6 span-4 append-1">
-		<%= link_to(image_tag('rosauers.png', :alt => "Rosauers Logo", :class => "sponsor_image"), "http://www.rosauers.com", :target => "_blank") %>
-	</div>
-	<div class="prepend-1 span-4 append-6 last">
-    <div class="non-logo">
-    	<%= link_to(image_tag('JimHarris.jpg', :alt => "Jim Harris Logo", :class => "sponsor_image"), "http://www.jrharrisphoto.com", :target => "_blank") %>
-    </div>
 	</div>
 </div>
 

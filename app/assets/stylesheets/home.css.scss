@@ -5,7 +5,6 @@
 h2 {
     font-family:Georgia;
     font-weight:bold;
-    border-top:1px solid #9AA3A0;
     padding:5px 0;
     margin:0;
 }
@@ -24,7 +23,7 @@ ul li {
 }
 #event_info {
     list-style:none;
-    margin:10px 0 0 0;
+    margin-top:25px;
     padding:5px;
 }
 #event_info li {
@@ -36,6 +35,9 @@ ul li {
     font-size:1.5em;
     font-weight:bold;
     display:inline-block;
+}
+.main_event_photo {
+    border:1px solid #000000;
 }
 .event_photo {
     border:1px solid #000000;
@@ -60,45 +62,30 @@ ul li {
     color:#851C16;
 }
 .donate_link {
-  font-weight:bold;
-  font-size:1.6em;
+    font-weight:bold;
+    font-size:1.6em;
 }
 .donate {
-  text-align:center;
+    text-align:center;
 
-  a.donate {
-      display:block;
-      border-top: 1px solid #757575;
-      background: #7f111a;
-      background: -webkit-gradient(linear, left top, left bottom, from(#813535), to(#7f111a));
-      background: -webkit-linear-gradient(top, #813535, #7f111a);
-      background: -moz-linear-gradient(top, #813535, #7f111a);
-      background: -ms-linear-gradient(top, #813535, #7f111a);
-      background: -o-linear-gradient(top, #813535, #7f111a);
-      padding: 16px 0;
-      margin:10px 0 20px 0;
-      width:100%;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
-      -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-      -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-      box-shadow: rgba(0,0,0,1) 0 1px 0;
-      text-shadow: rgba(0,0,0,.4) 0 1px 0;
-      color: white;
-      font-size: 17px;
-      font-family: Helvetica, Arial, Sans-Serif;
-      text-decoration: none;
-      vertical-align: middle;
-      cursor:pointer;
-  }
-  a.donate:hover {
-     border-top-color: #813535;
-     background: #813535;
-     color: #b5b5b5;
-  }
-  a.donate:active {
-     border-top-color: #1b435e;
-     background: #1b435e;
-  }
+    a.donate {
+        display:block;
+        background: #51ACC1;
+        padding: 16px 0;
+        margin:10px 0 20px 0;
+        width:100%;
+        border-radius: 6px;
+        color: white;
+        font-size: 17px;
+        font-family: Helvetica, Arial, Sans-Serif;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor:pointer;
+    }
+    a.donate:hover {
+        background: #3A828E;
+    }
+    a.donate:active {
+        background: #3A828E;
+    }
 }

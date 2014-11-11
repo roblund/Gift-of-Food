@@ -14,17 +14,30 @@
     box-shadow:$offset $offset $size #222;
 }
 body {
-    background: asset-url('bg.gif');
     font-family:Helvetica, Arial, sans-serif;
     font-size:12pt;
+    color: #0C0C0C;
+}
+a {
+    color: #51ACC1;
+}
+a:hover {
+    color: #3A828E;
+}
+.banner {
+    text-align:center;
+    font-weight:bold;
+    font-size:1.1em;
+    letter-spacing:.05em;
+    padding:20px;
+    background:#51ACC1;
+    color:#FFFFFF;
 }
 .padding {
     background:#ffffff;
     margin:20px auto;
     padding:10px 0;
     width:990px;
-    border:2px solid #787878;
-    @include box_shadow(5px, 3px);
 }
 .hidden_thing {
     height: 1px;
