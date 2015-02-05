@@ -7,7 +7,7 @@
 		<li><span>When:</span>April 11th, 2015</li>
 		<li><span>Time:</span>10am - Noon</li>
 		<li><span>Where:</span>Bozeman and Belgrade, Montana</li>
-		<li><span>Goal:</span>500 volunteers to collect 25,000 pounds of food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
+		<li><span>Goal:</span>125 volunteer teams to collect food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
 	</ul>
 </div>
 
@@ -16,10 +16,9 @@
 </div>
 
 <div class="span-24 last">
-	<h2>Come Join Us</h2>
+	<h2>Come and join us!</h2>
 	<div class="prepend-2 span-20 append-2 last">
-		<p>Invite your family and friends to join you on a pleasant Spring day of giving back to your community. In its first year, 2010, the event raised 14,000 pounds of food and $2,000 for the Gallatin Valley Food Bank. In our efforts to support the Food Bank’s need to support a growing number of families in the Gallatin County, we have set our sights on becoming the Valley's biggest food drive by increasing our impact and raising 25,000 pounds of food this year. A contribution of this size will go far to support the over 1,200 local families that receive emergency food boxes each month.</p>
-		<p>Please help us spread the word about this event! Post it on your Facebook, friend the event, tweet it, yell it, whisper it, do whatever you can to help us reach our audacious goals to help the Food Bank this Spring!</p>
+		<p>Invite your family and friends to join you on a pleasant Spring day of giving back to your community. Your contribution will go far to support the over 1,200 local families that receive emergency food boxes each month.</p>
 	</div>
 
   <div class="span-4">
@@ -43,28 +42,25 @@
 </div>
 
 <div class="span-24 last">
-	<h2>Volunteer or Donate</h2>
+	<h2>Volunteer</h2>
 	<div class="prepend-2 span-20 append-2 last">
     <h3><%=@volCount%>/125 volunteer teams = <%=number_to_percentage(@volPercent,:precision => 0)%> of our goal</h3><br/>
-		<p>We need your help raising 25,000 pounds of food, one bag at a time! Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
+    <h4>We need your help!</h4>
 
-    <h3>To Donate:</h3>
-    <p>If you would like to help this year with a monetary donation we now are accepting donations through the Gallatin Valley Food Bank's secure site.</p>
-    <p><%= link_to 'Donate to the Food Bank', donate_path, :class => "donate_link" %></p>
+    <p>Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
 
-    <h3>To Volunteer:</h3>
-		<p>Here is a summary of what we are asking you to do:</p>
+
+		<h4>What we are asking:</h4>
 
 		<ol>
-			<li><b>Week prior to the event:</b> Distribute grocery bags to the houses in your selected neighborhood sometime in the week prior to the event – ideally the Tuesday, Wednesday, or Thursday of that week. We made the neighborhoods smaller this year knowing that you would be covering them twice.</li>
-			<li><b>Day of the event:</b> Collect bags from all of the houses in your selected neighborhood on Saturday, December 14th.  Drop the bags at your assigned drop-off location.</li>
+			<li><b>Week before the event:</b> Distribute grocery bags to the houses in your selected neighborhood</li>
+			<li><b>Day of the event:</b> Collect bags from all of the houses in your selected neighborhood. Drop the bags at your assigned drop-off location.</li>
 		</ol>
 
-		<p>One week prior to the event organizers of the event will provide your team with grocery bags and an affixed description of the event that can be attached to the doors of all of the houses in your chosen neighborhood in the days leading up to the event. We tested this last year and found that those homes that received bags sometime during the week prior to the event were much more likely to have food out on their porches on the day of the event. In those neighborhoods where the volunteers actually knocked on the doors and explained the event when they dropped off the bags, 80-90% of the homes had bags out for the Saturday pickup.</p>
+    <p><b>Distributing grocery bags in the week before the event increases the amount of food donated tenfold!</b></p>
 
-		<p>On the day of the event, you and your team will check-in at your assigned drop-off location between 9:30-10:30am, receive lanyards for team members to make you all look good and official, and then set out to collect food from your selected neighborhood.  When your team has picked up every last can in your neighborhood, return to the drop-off location to celebrate and fill our semi-trucks full of food!</p>
+		<p>On the day of the event, you and your team should check-in at your assigned drop-off location between 9:30 - 10:30am, receive lanyards for team members, and then set out to collect food from your selected neighborhood. When your team has picked up every last can in your neighborhood, return to the drop-off location to celebrate and fill our semi-trucks full of food!</p>
 
-		<p>Please complete the form below to volunteer! Many thanks.</p>
 	</div>
 	<div class="span-24 last">
 		<%= render 'volunteers/new' %>
@@ -72,30 +68,17 @@
 </div>
 
 <div class="span-24 last">
-	<h2>Principal Sponsors</h2>
-	<div class="prepend-2 span-20 append-2 last">
-		<p>The event is brought to you by the generous support of <%= link_to "Cardinal Distributing", "http://www.cardinaldistributing.com", :target => "_blank" %>, <%= link_to "Big Sky Western Bank", "https://www.bigskybank.com", :target => "_blank" %>, and <%= link_to "KBZK", "http://www.kbzk.com", :target => "_blank" %> in conjunction with the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %>.</p>
-	</div>
-	<div class="prepend-3 span-4 append-1">
-		<%= link_to(image_tag('bigskywb.jpg', :alt => "Big Sky Western Bank Logo", :class => "sponsor_image"), "https://www.bigskybank.com", :target => "_blank") %>
-	</div>
-	<div class="prepend-1 span-4 append-1">
-		<%= link_to(image_tag('cardinal.jpg', :alt => "Cardinal Distributing Logo", :class => "sponsor_image"), "http://www.cardinaldistributing.com", :target => "_blank") %>
-	</div>
-	<div class="prepend-1 span-4 append-3 last">
-    <%= link_to(image_tag('kbzk.png', :alt => "KBZK Logo", :class => "sponsor_image"), "http://www.kbzk.com", :target => "_blank") %>
-	</div>
+  <h2>Donate</h2>
+
+  <div class="span-24 last">
+    <p>If you would like to help this year with a monetary donation we now are accepting donations through the Gallatin Valley Food Bank's secure site.</p>
+    <p><%= link_to 'Donate to the Food Bank', donate_path, :class => "donate_link" %></p>
+  </div>
 </div>
 
 <div class="span-24 last">
-	<h2>Event Inspiration</h2>
-	<div class="prepend-2 span-20 append-2 last">
-		<p>This event is directly modeled after a twenty year tradition in Butte, MT which is primarily sponsored by Thompson Distributing. The Butte food drive has become a pinnacle event, and continues to be a driving force in the community.</p>
-	</div>
-</div>
+  <h2>Gallatin Valley Food Bank</h2>
 
-<div class="span-24 last">
-	<h2>Gallatin Valley Food Bank</h2>
 	<div class="prepend-2 span-20 append-2 last">
     <p>From June 30, 2012 to July 1, 2013 the Gallatin Valley Food Bank:</p>
 		<ul>
@@ -111,4 +94,25 @@
       <li>In the summer months the Summer Meals Program helps to provide area children fill the meal gap and provides activities.  During the summer of 2013 the Food Bank Summer Meals Program provided 8,275 lunches, 1,997 breakfasts and 595 dinners to area children.</li>
 		</ul>
 	</div>
+
+  <div class="prepend-6 span-12 append-6 last">
+    <%= link_to(image_tag('food_bank_logo.png', :alt => "Gallatin Valley Food Bank", :class => "food_bank_logo"), "http://www.gallatinvalleyfoodbank.org") %>
+  </div>
 </div>
+
+<div class="span-24 last">
+	<h2>Principal Sponsors</h2>
+	<div class="prepend-2 span-20 append-2 last">
+		<p>The event is brought to you by the generous support of <%= link_to "Cardinal Distributing", "http://www.cardinaldistributing.com", :target => "_blank" %>, <%= link_to "Big Sky Western Bank", "https://www.bigskybank.com", :target => "_blank" %>, and <%= link_to "KBZK", "http://www.kbzk.com", :target => "_blank" %> in conjunction with the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %>.</p>
+	</div>
+	<div class="prepend-3 span-4 append-1">
+		<%= link_to(image_tag('bigskywb.jpg', :alt => "Big Sky Western Bank Logo", :class => "sponsor_image"), "https://www.bigskybank.com") %>
+	</div>
+	<div class="prepend-1 span-4 append-1">
+		<%= link_to(image_tag('cardinal.jpg', :alt => "Cardinal Distributing Logo", :class => "sponsor_image"), "http://www.cardinaldistributing.com") %>
+	</div>
+	<div class="prepend-1 span-4 append-3 last">
+    <%= link_to(image_tag('kbzk.png', :alt => "KBZK Logo", :class => "sponsor_image"), "http://www.kbzk.com") %>
+	</div>
+</div>
+
