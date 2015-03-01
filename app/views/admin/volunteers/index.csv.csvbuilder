@@ -19,7 +19,7 @@ Neighborhood.all.each do |n|
                  n.team_lead.created_at.strftime('%m-%d-%Y %H:%M:%S'),
                  n.name,
                  locations[n.drop_location][0],
-                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{n.id}"
+                 "http://springforfood.com/volunteers/maps?neighborhood=#{n.id}"
                ]
   else
     row_data = [
@@ -33,7 +33,7 @@ Neighborhood.all.each do |n|
                  '',
                  n.name,
                  locations[n.drop_location][0],
-                 "http://thegiftoffood.org/volunteers/maps?neighborhood=#{n.id}"
+                 "http://springforfood.com/volunteers/maps?neighborhood=#{n.id}"
                ]
   end
   # and don't forget to add the row to the csv

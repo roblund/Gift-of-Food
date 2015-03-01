@@ -1,9 +1,9 @@
 class VolunteerMailer < ActionMailer::Base
-  default :from => "info@thegiftoffood.org"
+  default :from => "info@springforfood.com"
 
   def thank_you(volunteer)
     @volunteer = volunteer
-    mail(:to => volunteer.email, :from => "info@thegiftoffood.org", :subject => "Thank you for volunteering for the Gift of Food!")
+    mail(:to => volunteer.email, :from => "info@springforfood.com", :subject => "Thank you for volunteering for Spring For Food!")
   end
 
 end
