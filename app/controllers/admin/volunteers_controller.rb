@@ -13,7 +13,7 @@ class Admin::VolunteersController < ApplicationController
     ["Home Depot", 2],
     ["MSU Fieldhouse", 3],
     ["Rosauer's", 4],
-    ["Belgrade Town Pump", 5]
+    ["Lee and Dad's", 5]
   ]
 
   def index
