@@ -51,7 +51,7 @@ class Admin::VolunteersController < ApplicationController
     @v = Volunteer.find(params[:id])
     @v.neighborhood.team_lead = nil
     @v.neighborhood.save
-    @v.update_attributes!(params[:volunteer])
+    @v.update_attributes!(volunteer_params)
     @v.neighborhood.team_lead = @v
     @v.neighborhood.save
 
@@ -71,6 +71,12 @@ class Admin::VolunteersController < ApplicationController
   helper_method :locations
   def locations
     @@locations
+  end
+
+  private
+
+  def volunteer_params
+    params.require(:volunteer).permit(:first_name, :last_name, :email, :phone, :company, :neighborhood_id, :is_mobile)
   end
 
 end
