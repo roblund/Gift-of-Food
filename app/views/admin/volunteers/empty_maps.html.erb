@@ -1,0 +1,10 @@
+<% @neighborhoods.each do |n| %>
+  <div class="page">
+     <h2><%= n.name %></h2>
+     <h3>Drop Location: <%= locations[n.drop_location][0] %></h3>
+
+    <div class="neighborhood_map">
+      <%= image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/%s.jpg" % n.file_id, :alt => "Neighborhood Map", :class => "map_image", :width => "950") %>
+    </div>
+  </div>
+<% end %>

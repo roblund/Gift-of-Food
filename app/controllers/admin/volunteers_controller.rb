@@ -43,6 +43,11 @@ class Admin::VolunteersController < ApplicationController
     render :layout => 'layouts/map_print'
   end
 
+  def empty_maps
+    @neighborhoods = Neighborhood.where(volunteer_id: nil).order('drop_location')
+    render :layout => 'layouts/map_print'
+  end
+
   def edit
     @volunteer = Volunteer.find(params[:id])
   end

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root :to => 'volunteers#index'
     get "/volunteers/maps" => "volunteers#maps"
+    get "/volunteers/empty_maps" => "volunteers#empty_maps"
     resources :volunteers
   end
 
