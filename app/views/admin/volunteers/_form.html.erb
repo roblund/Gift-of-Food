@@ -8,6 +8,7 @@
     <div><%=v.label :neighborhood_id, "Neighborhood:" %></div>
     <div><%=v.select :neighborhood_id, Neighborhood.order("name ASC").all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
   </div>
+  <div class="span-24 last"><a href="http://springforfood.com/volunteers/maps?neighborhood=<%=@volunteer.neighborhood.id %>">Map Link</a></div>
 </div>
 <div class="span-4"><%=v.submit "Save" %></div>
 <div class="span-4 append-16 last"><%=link_to "Cancel", admin_volunteers_path, :class => "cancel" %></div>
