@@ -17,7 +17,7 @@ class VolunteersController < ApplicationController
       @volunteer.neighborhood.save
     end
 
-    VolunteerMailer.thank_you(@volunteer).deliver
+    VolunteerMailer.thank_you(@volunteer).deliver_now
   end
 
   def maps
