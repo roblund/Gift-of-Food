@@ -58,7 +58,7 @@
     </div>
 
     <div class="prepend-1 span-11 last">
-      <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :alt => "Neighborhood Map", :class => "region_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Region diagram") %></div>
+      <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/regions.png", :alt => "Neighborhood Map", :class => "region_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/regions.png", :class => 'map_link', :rel => 'diagram', :title => "Region diagram") %></div>
 
       <% if @volunteer.neighborhood_id.nil? %>
         <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
