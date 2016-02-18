@@ -8,7 +8,7 @@
       <div><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
       <div><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
       <div><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %></div>
-      <div><%=v.label :company, "Company" %><%=v.text_field :company %></div>
+      <div><%=v.label :company, "Organization" %><%=v.text_field :company %></div>
       <div class="mobile_check group"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
       <% if @volunteer.neighborhood_id.nil? %>
         <div class="neighborhood_selector">
