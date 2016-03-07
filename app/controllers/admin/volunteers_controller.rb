@@ -10,10 +10,10 @@ class Admin::VolunteersController < ApplicationController
   @@locations = [
     ["All", 0],
     ["Bogert Park", 1],
-    ["Home Depot", 2],
-    ["MSU Fieldhouse", 3],
+    ["Smith's", 2],
+    ["Town and Country - 11th", 3],
     ["Rosauer's", 4],
-    ["Lee and Dad's", 5]
+    ["Town and Country - Belgrade", 5]
   ]
 
   def index
