@@ -5,3 +5,7 @@
 jQuery ->
   $('a.donate').click ->
     _gaq.push(['_trackEvent', 'Donate', 'buttonClick', 'Sent to Food Bank site'])
+
+  $('form.new_volunteer input[type="submit"]').click ->
+    $(this).prop('disabled', true)
+    $(this).parents('form').submit()
