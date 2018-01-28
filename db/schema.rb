@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 20151128163759) do
 
   create_table "neighborhoods", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "name", null: false
     t.integer "volunteer_id"
     t.string "file_id"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20151128163759) do
   end
 
   create_table "volunteers", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
     t.integer "zip"

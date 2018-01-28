@@ -1,4 +1,4 @@
-class AddCompanyToVolunteers < ActiveRecord::Migration
+class AddCompanyToVolunteers < ActiveRecord::Migration[5.1]
   def change
     add_column :volunteers, :company, :string
   end
