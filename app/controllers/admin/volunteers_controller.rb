@@ -18,14 +18,14 @@ class Admin::VolunteersController < ApplicationController
 
   def index
     @volunteers = Volunteer.order('created_at ASC').all
-    @all_emails = Volunteer.uniq.pluck(:email) * '; '
+    @all_emails = Volunteer.distinct.pluck(:email) * '; '
     gon.emails = [
       @all_emails,
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 1).uniq.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 2).uniq.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 3).uniq.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 4).uniq.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 5).uniq.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 1).distinct.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 2).distinct.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 3).distinct.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 4).distinct.pluck(:email) * '; ',
+      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 5).distinct.pluck(:email) * '; ',
     ]
 
     respond_to do |format|

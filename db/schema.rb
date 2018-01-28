@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -16,24 +15,24 @@ ActiveRecord::Schema.define(version: 20151128163759) do
   create_table "neighborhoods", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name",          null: false
-    t.integer  "volunteer_id"
-    t.string   "file_id"
-    t.integer  "drop_location"
-    t.integer  "region"
+    t.string "name", null: false
+    t.integer "volunteer_id"
+    t.string "file_id"
+    t.integer "drop_location"
+    t.integer "region"
   end
 
   create_table "volunteers", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "zip"
-    t.string   "email"
-    t.string   "phone"
-    t.boolean  "is_mobile"
-    t.integer  "neighborhood_id"
-    t.string   "company"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "zip"
+    t.string "email"
+    t.string "phone"
+    t.boolean "is_mobile"
+    t.integer "neighborhood_id"
+    t.string "company"
   end
 
 end
