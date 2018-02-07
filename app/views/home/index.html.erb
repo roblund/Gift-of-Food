@@ -1,125 +1,138 @@
-<div class="span-6">
-	<h1><%= image_tag('sff_logo.jpg', alt: "Spring For Food", width: 200) %></h1>
+<div class="columns">
+  <div class="column is-one-fifth">
+    <h1><%= image_tag('sff_logo.jpg', alt: "Spring For Food", width: 200) %></h1>
+  </div>
+
+  <div class="column">
+    <ul id="event_info">
+      <li><span>When:</span>April 8th, 2018</li>
+      <li><span>Time:</span>10am - 1pm</li>
+      <li><span>Where:</span>Bozeman and Belgrade, Montana</li>
+      <li><span>Goal:</span>125 volunteer teams to collect food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
+    </ul>
+  </div>
 </div>
 
-<div class="span-18 last">
-	<ul id="event_info">
-		<li><span>When:</span>April 1st, 2017</li>
-		<li><span>Time:</span>10am - 1pm</li>
-		<li><span>Where:</span>Bozeman and Belgrade, Montana</li>
-		<li><span>Goal:</span>125 volunteer teams to collect food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
-	</ul>
+<div class="columns">
+  <div class="column is-10 is-offset-1 main_image_area">
+    <%= image_tag('https://s3.amazonaws.com/media.thegiftoffood.org/2016-food-drive-weights.png', alt: 'Chart show food drive intake for Gallatin Valley Food Bank', class: 'main_event_photo') %>
+  </div>
 </div>
 
-<div class="prepend-1 span-22 last">
-  <%= image_tag('https://s3.amazonaws.com/media.thegiftoffood.org/2016-food-drive-weights.png', alt: 'Chart show food drive intake for Gallatin Valley Food Bank', class: 'main_event_photo') %>
+<div class="columns">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    <h2>Come and join us!</h2>
+    <div class="prepend-2 span-20 append-2 last">
+      <p>Invite your family and friends to join you on a pleasant Spring day of giving back to your community. Your contribution will go far to support the over 1,200 local families that receive emergency food boxes each month.</p>
+      <h3 class="facebook-link"><a href="https://www.facebook.com/springforfood">Join Us On Facebook</a></h3>
+    </div>
+  </div>
 </div>
 
-<div class="span-24 last">
-	<h2>Come and join us!</h2>
-	<div class="prepend-2 span-20 append-2 last">
-		<p>Invite your family and friends to join you on a pleasant Spring day of giving back to your community. Your contribution will go far to support the over 1,200 local families that receive emergency food boxes each month.</p>
-    <h3 class="facebook-link"><a href="https://www.facebook.com/springforfood">Join Us On Facebook</a></h3>
-	</div>
-
-  <div class="span-4">
+<div class="columns event_photos">
+  <div class="column">
     <%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/photos/thumbs/helicopter.jpg", :class => "event_photo"), "https://s3.amazonaws.com/media.thegiftoffood.org/photos/helicopter.jpg", :class => 'photo_link', :rel => 'Photos') %>
   </div>
-  <div class="span-4">
+  <div class="column">
     <%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/photos/thumbs/dog-bone.jpg", :class => "event_photo"), "https://s3.amazonaws.com/media.thegiftoffood.org/photos/dog-bone.jpg", :class => "photo_link", :rel => "Photos") %>
   </div>
-  <div class="span-4">
+  <div class="column">
     <%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/photos/thumbs/2010-5.jpg", class: 'main_event_photo'), "https://s3.amazonaws.com/media.thegiftoffood.org/photos/2010-5.jpg", :class => "photo_link", :rel => "Photos") %>
   </div>
-  <div class="span-4">
+  <div class="column">
     <%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/photos/thumbs/truck.jpg", :class => "event_photo"), "https://s3.amazonaws.com/media.thegiftoffood.org/photos/truck.jpg", :class => "photo_link", :rel => "Photos") %>
   </div>
-  <div class="span-4">
+  <div class="column">
     <%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/photos/thumbs/loading-box.jpg", :class => "event_photo"), "https://s3.amazonaws.com/media.thegiftoffood.org/photos/loading-box.jpg", :class => "photo_link", :rel => "Photos") %>
   </div>
-  <div class="span-4 last">
+  <div class="column">
     <%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/photos/thumbs/2010-6.jpg", :class => "event_photo"), "https://s3.amazonaws.com/media.thegiftoffood.org/photos/2010-6.jpg", :class => "photo_link", :rel => "Photos") %>
   </div>
 </div>
 
-<div class="span-24 last">
-	<h2>Volunteer</h2>
-	<div class="prepend-2 span-20 append-2 last">
-    <h3><%=@volCount%>/125 volunteer teams = <%=number_to_percentage(@volPercent,:precision => 0)%> of our goal</h3><br/>
-    <h4>We need your help!</h4>
+<div class="columns">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    <h2>Volunteer</h2>
+    <div class="prepend-2 span-20 append-2 last">
+      <h3><%=@volCount%>/125 volunteer teams = <%=number_to_percentage(@volPercent,:precision => 0)%> of our goal</h3><br/>
+      <h4>We need your help!</h4>
 
-    <p>Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
+      <p>Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
 
 
-		<h4>What we are asking:</h4>
+      <h4>What we are asking:</h4>
 
-		<ol>
-			<li><b>Week before the event:</b> Distribute grocery bags to the houses in your selected neighborhood</li>
-			<li><b>Day of the event:</b> Collect bags from all of the houses in your selected neighborhood. Drop the bags at your assigned drop-off location.</li>
-		</ol>
+      <ol>
+        <li><b>Week before the event:</b> Distribute grocery bags to the houses in your selected neighborhood</li>
+        <li><b>Day of the event:</b> Collect bags from all of the houses in your selected neighborhood. Drop the bags at your assigned drop-off location.</li>
+      </ol>
 
-    <p><b>Distributing grocery bags in the week before the event increases the amount of food donated tenfold!</b></p>
-    <p>Grocery bags with attached event flyers can be picked up from Big Sky Western Bank (either the downtown branch or the Huffine/Ferguson branch). Please do NOT attach bags to mailboxes. Instead attached them to door handles or door mats.</p>
+      <p><b>Distributing grocery bags in the week before the event increases the amount of food donated tenfold!</b></p>
+      <p>Grocery bags with attached event flyers can be picked up from Big Sky Western Bank (either the downtown branch or the Huffine/Ferguson branch). Please do NOT attach bags to mailboxes. Instead attached them to door handles or door mats.</p>
 
-		<p>On the day of the event, you and your team should check-in at your assigned drop-off location between 9:30 - 10:30am, receive lanyards for team members, and then set out to collect food from your selected neighborhood. When your team has picked up every last can in your neighborhood, return to the drop-off location to celebrate and fill our semi-trucks full of food!</p>
+      <p>On the day of the event, you and your team should check-in at your assigned drop-off location between 9:30 - 10:30am, receive lanyards for team members, and then set out to collect food from your selected neighborhood. When your team has picked up every last can in your neighborhood, return to the drop-off location to celebrate and fill our semi-trucks full of food!</p>
 
-	</div>
-	<div class="span-24 last">
-		<%= render 'volunteers/new' %>
-	</div>
+    </div>
+  </div>
 </div>
 
-<div class="span-24 last">
-  <h3>Monetary Donation</h3>
-  <div class="span-24 last">
+<%= render 'volunteers/new' %>
+
+<div class="columns">
+  <div class="column is-8 is-offset-2">
+    <h3>Monetary Donation</h3>
     <p>If you would like to donate some money towards this year's food drive, you can do so through the Gallatin Valley Food Bank's secure website. You can also join in on the fun and create your own fundraising page or a team page! Follow the link and click the green "become a fundraiser" button.</p>
     <p class="donate_button"><%= link_to(image_tag('donate.jpg', alt: "Donate Now", width: 250), 'https://www.classy.org/campaign/spring-for-food-2017/c121254', :class => "donate_link") %></p>
   </div>
 </div>
 
-<div class="span-24 last">
-  <h2>Gallatin Valley Food Bank</h2>
+<div class="columns">
+  <div class="column is-10 is-offset-1">
+    <h2>Gallatin Valley Food Bank</h2>
 
-	<div class="prepend-2 span-20 append-2 last">
-    <p>HRDC – Food and Nutrition Programs 2015-2016 FYE Numbers</p>
-    <p>Gallatin Valley Food Bank, Community Café, Summer Lunch, Kidspack, Senior Groceries, Big Sky Community Food Bank and Headwaters Area Food Bank</p>
-    <p>GVFB Mission: To improve food security throughout Gallatin Valley and Southwest Montana</p>
-		<ul>
-      <li>The Gallatin Valley Food Bank serves an average 1245 households (roughly 3,104 individuals) a month through the Emergency Food Box Program alone at our Bozeman location and our satellite service in Belgrade.</li>
-      <li>On average, 5,983 pounds (2.99 tons) of food are distributed to families every day.</li>
-      <li>During the 2015-2016 fiscal year end the Gallatin Valley Food Bank distributed 1,945,914 pounds of food.</li>
-      <li>Out of the total, 160,550 pounds of food went to other area non-profits, the Community Café, CSFP and KidsPack. All this took an extraordinary effort by hundreds of volunteers and dedicated staff.</li>
-      <li>In 2015-2016, the food rescue program collected 1,086,221 pounds of food from area grocery stores.</li>
-      <li>In the 2015-2016 fiscal year the Gallatin Valley Food Bank and our satellite site in Belgrade distributed 14,950 food boxes.</li>
-      <li>The Headwaters Area Food Bank provided 567 food boxes amounting to 32,160 lbs. of food distributed.</li>
-      <li>BSCFB distributed 1,548 food boxes to 1,654 people amounting to 41,776 lbs. of food.</li>
-      <li>The Senior Grocery Program provides approximately 26 lbs. of food once a month to approximately 355 seniors.</li>
-      <li>During the fiscal year 2015-16, the Community Café provided 46,715 meals to 27,961 customers, out of this total, 3,283 were children and 2,575 were seniors.</li>
-      <li>The Summer Meals Program provided breakfast at 5 sites, lunch at 10 sites, and supper at 1 site, serving a total of 19,374 meals to children.  In addition the evening service at Whittier served 4,742 meals.</li>
-      <li>Volunteers are vital to fighting hunger. Our volunteers are the backbone of our efforts, during the last fiscal year our volunteers contributed 22,157 hours to the GVFB.  The Community Café &amp; Kidspack volunteer contribution was 11,832 hours.  With that addition the volunteer contribution for our Food and Nutrition programs grow to 34,656 hours.</li>
-      <li>During the 2015-16 school year the KidsPack program reached an average of 700 kids every Friday serving 25 sites in areas as far as Boulder, Twin Bridges, and Ennis, Montana.  This equates to 15,631 KidsPacks distributed during the 2015-16 school year!</li>
-		</ul>
-    <p>These are the Food and Nutrition Programs of the Human Resource Development Council.  By assisting with Spring for Food you help so many!</p>
-	</div>
+    <div class="">
+      <p><strong>GVFB Mission:</strong> To improve food security throughout Gallatin Valley and Southwest Montana</p>
+      <p>HRDC – Food and Nutrition Programs 2015-2016 FYE Numbers:</p>
+      <p>Includes Gallatin Valley Food Bank, Community Café, Summer Lunch, Kidspack, Senior Groceries, Big Sky Community Food Bank and Headwaters Area Food Bank</p>
+      <ul>
+        <li>The Gallatin Valley Food Bank serves an average 1245 households (roughly 3,104 individuals) a month through the Emergency Food Box Program alone at our Bozeman location and our satellite service in Belgrade.</li>
+        <li>On average, 5,983 pounds (2.99 tons) of food are distributed to families every day.</li>
+        <li>During the 2015-2016 fiscal year end the Gallatin Valley Food Bank distributed 1,945,914 pounds of food.</li>
+        <li>Out of the total, 160,550 pounds of food went to other area non-profits, the Community Café, CSFP and KidsPack. All this took an extraordinary effort by hundreds of volunteers and dedicated staff.</li>
+        <li>In 2015-2016, the food rescue program collected 1,086,221 pounds of food from area grocery stores.</li>
+        <li>In the 2015-2016 fiscal year the Gallatin Valley Food Bank and our satellite site in Belgrade distributed 14,950 food boxes.</li>
+        <li>The Headwaters Area Food Bank provided 567 food boxes amounting to 32,160 lbs. of food distributed.</li>
+        <li>BSCFB distributed 1,548 food boxes to 1,654 people amounting to 41,776 lbs. of food.</li>
+        <li>The Senior Grocery Program provides approximately 26 lbs. of food once a month to approximately 355 seniors.</li>
+        <li>During the fiscal year 2015-16, the Community Café provided 46,715 meals to 27,961 customers, out of this total, 3,283 were children and 2,575 were seniors.</li>
+        <li>The Summer Meals Program provided breakfast at 5 sites, lunch at 10 sites, and supper at 1 site, serving a total of 19,374 meals to children.  In addition the evening service at Whittier served 4,742 meals.</li>
+        <li>Volunteers are vital to fighting hunger. Our volunteers are the backbone of our efforts, during the last fiscal year our volunteers contributed 22,157 hours to the GVFB.  The Community Café &amp; Kidspack volunteer contribution was 11,832 hours.  With that addition the volunteer contribution for our Food and Nutrition programs grow to 34,656 hours.</li>
+        <li>During the 2015-16 school year the KidsPack program reached an average of 700 kids every Friday serving 25 sites in areas as far as Boulder, Twin Bridges, and Ennis, Montana.  This equates to 15,631 KidsPacks distributed during the 2015-16 school year!</li>
+      </ul>
+      <p>These are the Food and Nutrition Programs of the Human Resource Development Council.  By assisting with Spring for Food you help so many!</p>
+    </div>
 
-  <div class="prepend-7 span-10 append-7 last">
-    <%= link_to(image_tag('food_bank_logo.png', :alt => "Gallatin Valley Food Bank", :class => "food_bank_logo"), "http://www.gallatinvalleyfoodbank.org") %>
+    <div class="food_bank_logo_area">
+      <%= link_to(image_tag('food_bank_logo.png', :alt => "Gallatin Valley Food Bank", :class => "food_bank_logo"), "http://www.gallatinvalleyfoodbank.org") %>
+    </div>
   </div>
 </div>
 
-<div class="span-24 last">
-	<h2>Principal Sponsors</h2>
-	<div class="prepend-2 span-20 append-2 last">
-		<p>The event is brought to you by the generous support of <%= link_to "Cardinal Distributing", "http://www.cardinaldistributing.com", :target => "_blank" %>, <%= link_to "Big Sky Western Bank", "https://www.bigskybank.com", :target => "_blank" %>, and <%= link_to "KBZK", "http://www.kbzk.com", :target => "_blank" %> in conjunction with the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %>.</p>
-	</div>
-	<div class="prepend-3 span-4 append-1">
-		<%= link_to(image_tag('bigskywb.jpg', :alt => "Big Sky Western Bank Logo", :class => "sponsor_image"), "https://www.bigskybank.com") %>
-	</div>
-	<div class="prepend-1 span-4 append-1">
-		<%= link_to(image_tag('cardinal.jpg', :alt => "Cardinal Distributing Logo", :class => "sponsor_image"), "http://www.cardinaldistributing.com") %>
-	</div>
-	<div class="prepend-1 span-4 append-3 last">
-    <%= link_to(image_tag('kbzk.png', :alt => "KBZK Logo", :class => "sponsor_image"), "http://www.kbzk.com") %>
-	</div>
+<div class="columns">
+  <div class="column is-10 is-offset-1">
+    <h2>Principal Sponsors</h2>
+    <div class="">
+      <p>The event is brought to you by the generous support of <%= link_to "Cardinal Distributing", "http://www.cardinaldistributing.com", :target => "_blank" %>, <%= link_to "Big Sky Western Bank", "https://www.bigskybank.com", :target => "_blank" %>, and <%= link_to "KBZK", "http://www.kbzk.com", :target => "_blank" %> in conjunction with the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %>.</p>
+    </div>
+    <div class="">
+      <%= link_to(image_tag('bigskywb.jpg', :alt => "Big Sky Western Bank Logo", :class => "sponsor_image"), "https://www.bigskybank.com") %>
+    </div>
+    <div class="">
+      <%= link_to(image_tag('cardinal.jpg', :alt => "Cardinal Distributing Logo", :class => "sponsor_image"), "http://www.cardinaldistributing.com") %>
+    </div>
+    <div class="">
+      <%= link_to(image_tag('kbzk.png', :alt => "KBZK Logo", :class => "sponsor_image"), "http://www.kbzk.com") %>
+    </div>
+  </div>
 </div>
 

@@ -1,108 +1,113 @@
-// Place all the styles related to the volunteers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 .new_volunteer {
-    margin-bottom:10px;
+  margin-bottom:10px;
+
+  label {
+    display:inline-block;
+    width:100px;
+    padding:0;
+    margin:0;
+  }
+  .assigned_label {
+    font-weight:bold;
+    display:inline-block;
+    margin:5px 0 5px 0;
+  }
+  input,
+  select {
+    margin:0 0 10px 0;
+    padding:0;
+    border:1px solid #cccccc;
+  }
+  .mobile_check input {
+    margin-left:100px;
+  }
+  .neighborhood_selector {
+    margin-top:6px;
+
+    .selector_field {
+      text-align: center;
+
+      label {
+        width:350px;
+        margin-bottom:5px;
+      }
+
+      select {
+        width:350px;
+        height:26px;
+      }
+    }
+  }
+  .mobile_check {
+    input {
+      float:left;
+      margin-top:10px;
+    }
 
     label {
-        display:inline-block;
-        width:100px;
-        padding:0;
-        margin:0;
+      float:left;
+      width:250px;
+      margin:5px 0 10px 0;
     }
-    .assigned_label {
-        font-weight:bold;
-        display:inline-block;
-        margin:5px 0 5px 0;
-    }
-    input,
-    select {
-        margin:0 0 10px 0;
-        padding:0;
-        border:1px solid #cccccc;
-    }
-    .mobile_check input {
-        margin-left:100px;
-    }
-    .neighborhood_selector {
-        margin-top:6px;
+  }
 
-        label {
-            width:100%;
-            margin-bottom:5px;
-        }
-
-        select {
-            width:100%;
-            height:26px;
-        }
-    }
-    .mobile_check {
-        input {
-            float:left;
-            margin-top:10px;
-        }
-
-        label {
-            float:left;
-            width:250px;
-            margin:5px 0 10px 0;
-        }
-    }
-
-    .team_lead_check label {
-        width:250px;
-        margin:5px 0 10px 0;
-    }
-    .zip_field label {
-        margin-left:2px;
-        width:98px;
-    }
-    input[type="text"],
-    input[type="number"],
-    input[type="tel"],
-    input[type="email"] {
-        padding:4px;
-        width:350px;
-    }
-    input[type="text"]:focus,
-    input[type="number"]:focus,
-    input[type="tel"]:focus,
-    input[type="email"]:focus {
-        border-color:#666666;
-    }
-    input[type="checkbox"] {
-        margin-right:10px;
-    }
-    .map_thumb img {
-        border:1px solid #9AA3A0;
-    }
-    input[type="submit"] {
-        border:none;
-        background: #51ACC1;
-        padding: 16px 0;
-        margin:10px 0 20px 0;
-        width:100%;
-        border-radius: 6px;
-        color: white;
-        font-size: 17px;
-        font-family: Helvetica, Arial, Sans-Serif;
-        text-decoration: none;
-        vertical-align: middle;
-        cursor:pointer;
-    }
-    input[type="submit"]:hover {
-        background: #3A828E;
-    }
-    input[type="submit"]:active {
-        background: #3A828E;
-    }
+  .team_lead_check label {
+    width:250px;
+    margin:5px 0 10px 0;
+  }
+  .zip_field label {
+    margin-left:2px;
+    width:98px;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"] {
+    padding:4px;
+    width:350px;
+  }
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus {
+    border-color:#666666;
+  }
+  input[type="checkbox"] {
+    margin-right:10px;
+  }
+  input[type="submit"] {
+    border:none;
+    background: #51ACC1;
+    padding: 16px 0;
+    margin:10px 0 20px 0;
+    width:100%;
+    border-radius: 6px;
+    color: white;
+    font-size: 17px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor:pointer;
+  }
+  input[type="submit"]:hover {
+    background: #3A828E;
+  }
+  input[type="submit"]:active {
+    background: #3A828E;
+  }
 }
 
+.maps {
+  text-align: center;
+
+  .map_thumb img {
+    border:1px solid #9AA3A0;
+  }
+}
 .region_image,
 .map_image {
-    border:1px solid #000000;
+  border:1px solid #000000;
 }
 .screenshot {
-    border:1px solid #9AA3A0;
+  border:1px solid #9AA3A0;
 }

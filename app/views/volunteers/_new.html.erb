@@ -1,47 +1,60 @@
-<%=form_for @volunteer, :html => { :class => "new_volunteer group" } do  |v| %>
-  <div class="span-24 last">
-    <div class="span-12">
+<div class="columns">
+  <div class="column is-half">
+    <%=form_for @volunteer, :html => { :class => "new_volunteer group" } do  |v| %>
       <% if !@error_message.nil? %>
         <div class="error_message"><%= @error_message %></div>
       <% end %>
-      <div><%=v.label :first_name, "First Name *" %><%=v.text_field :first_name %></div>
-      <div><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
-      <div><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
-      <div><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %></div>
-      <div><%=v.label :company, "Organization" %><%=v.text_field :company %></div>
-      <div class="mobile_check group"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %></div>
+
+      <div class="form_field">
+        <%=v.label :first_name, "First Name *" %><%=v.text_field :first_name %>
+      </div>
+      <div class="form_field">
+        <%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %>
+      </div>
+      <div class="form_field">
+        <%=v.label :company, "Organization" %><%=v.text_field :company %>
+      </div>
+      <div class="form_field">
+        <%=v.label :email, "Email *" %><%=v.email_field :email %>
+      </div>
+      <div class="form_field">
+        <%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %>
+      </div>
+      <div class="form_field mobile_check group">
+        <%=v.check_box :is_mobile %><%=v.label :is_mobile,"Is this a mobile number?" %>
+      </div>
+
       <% if @volunteer.neighborhood_id.nil? %>
         <div class="neighborhood_selector">
-          <div><h3>Available Neighborhoods *</h3></div>
+          <h3>Available Neighborhoods *</h3>
 
-          <div class="prepend-1 span-10 last">
-            <div><p>If you don't see your neighborhood listed, somebody has likely already signed up to cover it.</p></div>
-
+          <p><em>If you don't see your neighborhood listed, somebody has likely already signed up to cover it.</em></p>
+          <div class="selector_field">
             <%= label_tag "region", "Which region would you like to choose from?" %>
             <%= select_tag "region", "<option>1</option><option>2</option><option>3</option><option>4</option><option>Belgrade</option>".html_safe, {include_blank: true} %>
           </div>
 
-          <div id="region_1" class="prepend-1 span-10 last" style="display: none;">
+          <div id="region_1" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_1", "Region 1 neighborhoods:" %></div>
             <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 1').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_1", disabled: true} %>
           </div>
 
-          <div id="region_2" class="prepend-1 span-10 last" style="display: none;">
+          <div id="region_2" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_2", "Region 2 neighborhoods:" %></div>
             <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 2').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_2", disabled: true} %>
           </div>
 
-          <div id="region_3" class="prepend-1 span-10 last" style="display: none;">
+          <div id="region_3" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_3", "Region 3 neighborhoods:" %></div>
             <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 3').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_3", disabled: true} %>
           </div>
 
-          <div id="region_4" class="prepend-1 span-10 last" style="display: none;">
+          <div id="region_4" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_4", "Region 4 neighborhoods:" %></div>
             <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 4').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_4", disabled: true} %>
           </div>
 
-          <div id="region_5" class="prepend-1 span-10 last" style="display: none;">
+          <div id="region_5" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_5", "Belgrade neighborhoods:" %></div>
             <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 5').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_5", disabled: true} %>
           </div>
@@ -52,21 +65,20 @@
         <div><span class="assigned_label">Assigned Neighborhood:</span>&nbsp;<%=@volunteer.neighborhood.name %></div>
       <% end %>
 
-      <div class="prepend-3 span-6 last">
+      <div class="column is-8 is-offset-2">
         <%=v.submit "Volunteer!" %>
       </div>
-    </div>
-
-    <div class="prepend-1 span-11 last">
-      <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/regions.png", :alt => "Neighborhood Map", :class => "region_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/regions.png", :class => 'map_link', :rel => 'diagram', :title => "Region diagram") %></div>
-
-      <% if @volunteer.neighborhood_id.nil? %>
-        <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
-      <% else %>
-        <div class="map_thumb"><%=link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/%s.jpg" % @volunteer.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/%s.jpg" % @volunteer.neighborhood.file_id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
-      <% end %>
-      <div class="map_thumb_instructions" style="display: none;">(Click to enlarge)</div>
-    </div>
+    <% end %>
   </div>
 
-<% end %>
+  <div class="column is-half maps">
+    <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/regions.png", :alt => "Neighborhood Map", :class => "region_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/regions.png", :class => 'map_link', :rel => 'diagram', :title => "Region diagram") %></div>
+
+    <% if @volunteer.neighborhood_id.nil? %>
+      <div class="map_thumb"><%= link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/small/bozeman.png", :class => 'map_link', :rel => 'maps', :title => "Bozeman") %></div>
+    <% else %>
+      <div class="map_thumb"><%=link_to(image_tag("https://s3.amazonaws.com/media.thegiftoffood.org/small/%s.jpg" % @volunteer.neighborhood.file_id, :alt => "Neighborhood Map", :class => "map_image"), "https://s3.amazonaws.com/media.thegiftoffood.org/%s.jpg" % @volunteer.neighborhood.file_id, :class => 'map_link', :rel => 'maps', :title => @volunteer.neighborhood.name) %></div>
+    <% end %>
+    <div class="map_thumb_instructions" style="display: none;">(Click to enlarge)</div>
+  </div>
+</div>
