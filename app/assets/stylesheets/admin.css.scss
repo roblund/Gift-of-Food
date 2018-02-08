@@ -1,9 +1,7 @@
-// Place all the styles related to the admin controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-table {
+.volunteer_table {
   font-size:9pt;
+  width: 100%;
+  flex: 0 0 100%;
 }
 .unique_emails {
   h4 {
@@ -12,7 +10,8 @@ table {
   .drop_location_select {
     text-align: right;
   }
-  textarea {
-    height: 100px;
-  }
+}
+textarea {
+  height: 100px;
+  min-width: 40vw;
 }

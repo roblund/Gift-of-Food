@@ -1,15 +1,15 @@
-<div class="span-24 last"><%=v.label :first_name, "First Name *" %><%=v.text_field :first_name %></div>
-<div class="span-24 last"><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
-<div class="span-24 last"><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
-<div class="span-24 last"><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %><span class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Mobile?" %></span></div>
-<div class="span-24 last"><%=v.label :company, "Organization" %><%=v.text_field :company %></div>
-<div class="span-24 last">
+<div><%=v.label :first_name, "First Name *" %><%=v.text_field :first_name %></div>
+<div><%=v.label :last_name, "Last Name *" %><%=v.text_field :last_name %></div>
+<div><%=v.label :email, "Email *" %><%=v.email_field :email %></div>
+<div><%=v.label :telephone, "Phone *" %><%=v.telephone_field :phone %><span class="mobile_check"><%=v.check_box :is_mobile %><%=v.label :is_mobile,"Mobile?" %></span></div>
+<div><%=v.label :company, "Organization" %><%=v.text_field :company %></div>
+<div>
   <div class="neighborhood_selector">
     <div><%=v.label :neighborhood_id, "Neighborhood:" %></div>
     <div><%=v.select :neighborhood_id, Neighborhood.order("name ASC").all.collect {|p| [ p.name, p.id ] }, { :include_blank => true } %></div>
   </div>
-  <div class="span-24 last"><a href="http://springforfood.com/volunteers/maps?neighborhood=<%=@volunteer.neighborhood.id %>">Current Map Link</a></div>
+  <div><a href="http://springforfood.com/volunteers/maps?neighborhood=<%=@volunteer.neighborhood.id %>">Current Map Link</a></div>
 </div>
-<div class="span-4"><%=v.submit "Save" %></div>
-<div class="span-4 append-16 last"><%=link_to "Cancel", admin_volunteers_path, :class => "cancel" %></div>
-<div class="span-24 last"><%=link_to "[Delete This Volunteer]", admin_volunteer_path(@volunteer), method: 'delete', class: "delete_link", data: { confirm: "Are you sure you want to delete this volunteer?" } %></div>
+<div class="edit_save_button"><%=v.submit "Save" %></div>
+<div><%=link_to "Cancel", admin_volunteers_path, :class => "cancel" %></div>
+<div><%=link_to "[Delete This Volunteer]", admin_volunteer_path(@volunteer), method: 'delete', class: "delete_link", data: { confirm: "Are you sure you want to delete this volunteer?" } %></div>

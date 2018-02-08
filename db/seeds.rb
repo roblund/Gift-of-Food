@@ -53,7 +53,7 @@ hoods = [
   { name: "Beall Park Area", file_id: "2012_51", drop_location: 1, region: 2 },
   { name: "Peach - Rouse - Tamarack - Front", file_id: "2012_53", drop_location: 1, region: 2 },
   { name: "Lamme - Rouse - Peach - Church", file_id: "2012_54", drop_location: 1, region: 2 },
-  { name: "Kock - 15th - Babcock - 11th", file_id: "2012_55", drop_location: 4, region: 2 },
+  { name: "Koch - 15th - Babcock - 11th", file_id: "2012_55", drop_location: 4, region: 2 },
   { name: "N 10th - N 11th", file_id: "2012_95", drop_location: 2, region: 2 },
   { name: "Village Downtown", file_id: "2012_97", drop_location: 1, region: 2 },
 
@@ -139,5 +139,5 @@ hoods = [
 ]
 
 hoods.each do |n|
-  Neighborhood.create(n)
+  Neighborhood.create!(n)
 end
