@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
 
-gem 'pg'
+gem 'pg', '~> 0.18'
 gem 'puma'
 gem 'json'
 gem 'jquery-rails'
