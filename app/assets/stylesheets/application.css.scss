@@ -7,10 +7,16 @@
  *= require colorbox-rails
 */
 
+@import "bulma";
+
 @mixin box_shadow($offset, $size) {
     -moz-box-shadow:$offset $offset $size #222;
     -webkit-box-shadow:$offset $offset $size #222;
     box-shadow:$offset $offset $size #222;
+}
+h1 {
+  font-size: 2.2em;
+  margin-bottom: .7em;
 }
 body {
     font-family:Helvetica, Arial, sans-serif;
@@ -36,7 +42,6 @@ a:hover {
     background:#ffffff;
     margin:20px auto;
     padding:10px 0;
-    width:990px;
 }
 .hidden_thing {
     height: 1px;

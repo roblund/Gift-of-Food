@@ -1,6 +1,6 @@
 <h1>Volunteer Team Leads</h1>
 
-<table class="no-zebra">
+<table class="table volunteer_table">
   <tr>
     <th>Name</th>
     <th>Email</th>
@@ -31,14 +31,23 @@
   <% end %>
 </table>
 
-<div class="unique_emails span-24 last">
-  <div class="span-12">
+<div class="columns unique_emails">
+  <div class="column is-half">
     <h4>Email Addresses (remember to use BCC):</h4>
   </div>
-  <div class="drop_location_select span-12 last">
+  <div class="column is-half drop_location_select">
     <span>Drop Location: </span><%= select_tag "drop_location", options_for_select(locations) %>
   </div>
-  <textarea class="span-24 last"><%= @all_emails %></textarea>
 </div>
 
-<div class="span-24 last"><%=link_to "Download list as CSV", "/admin/volunteers.csv" %>&nbsp;|&nbsp;<%=link_to "Print maps with volunteer names", admin_volunteers_maps_path %>&nbsp;|&nbsp;<%=link_to "Print empty neighborhoods", admin_volunteers_empty_maps_path %></div>
+<div class="columns">
+  <div class="column">
+    <textarea><%= @all_emails %></textarea>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <%=link_to "Download list as CSV", "/admin/volunteers.csv" %>&nbsp;|&nbsp;<%=link_to "Print maps with volunteer names", admin_volunteers_maps_path %>&nbsp;|&nbsp;<%=link_to "Print empty neighborhoods", admin_volunteers_empty_maps_path %>
+  </div>
+</div>

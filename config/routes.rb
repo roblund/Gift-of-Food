@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resource :volunteers, :only => [:new,:create] do
   end
 
-  get "/donate" => "home#donate"
   get "/volunteers/maps" => "volunteers#maps"
 
 
