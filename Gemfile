@@ -26,13 +26,13 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
 
+gem 'pg'
 gem 'puma'
 gem 'json'
 gem 'jquery-rails'

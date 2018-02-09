@@ -4,6 +4,5 @@ log/*.log
 tmp/
 .sass-cache/
 *.sublime-*
-database.yml
 *.swp
 *.DS_Store
