@@ -1,11 +1,10 @@
 THE GIFT OF FOOD
 
-This is a Rails web app used for The Gift of Food holiday food drive in Bozeman Montana. It is intended to be used as an example Rails app, so feel free to copy bits of it for your own project. If you would like to use it as a starting point for your own site that's fine as well.
-
+This is a Rails web app used for the Spring For Food food drive (formerly the Gift of Food) in Bozeman Montana. It is intended to be used as an example Rails app, so feel free to copy bits of it for your own project. If you would like to use it as a starting point for your own site that's fine as well.
 
 License: The MIT License
 
-Copyright (c) 2013 Robert Lund
+Copyright (c) Robert Lund, Jade Robbins
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
