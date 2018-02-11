@@ -21,11 +21,11 @@ class Admin::VolunteersController < ApplicationController
     @all_emails = Volunteer.distinct.pluck(:email) * '; '
     gon.emails = [
       @all_emails,
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 1).distinct.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 2).distinct.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 3).distinct.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 4).distinct.pluck(:email) * '; ',
-      Volunteer.joins(:neighborhood).where('neighborhoods.drop_location' => 5).distinct.pluck(:email) * '; ',
+      Volunteer.includes(:neighborhood).where(:neighborhoods => { :drop_location => 1 }).distinct.pluck(:email) * '; ',
+      Volunteer.includes(:neighborhood).where(:neighborhoods => { :drop_location => 2 }).distinct.pluck(:email) * '; ',
+      Volunteer.includes(:neighborhood).where(:neighborhoods => { :drop_location => 3 }).distinct.pluck(:email) * '; ',
+      Volunteer.includes(:neighborhood).where(:neighborhoods => { :drop_location => 4 }).distinct.pluck(:email) * '; ',
+      Volunteer.includes(:neighborhood).where(:neighborhoods => { :drop_location => 5 }).distinct.pluck(:email) * '; ',
     ]
 
     respond_to do |format|
@@ -44,7 +44,7 @@ class Admin::VolunteersController < ApplicationController
   end
 
   def empty_maps
-    @neighborhoods = Neighborhood.where(volunteer_id: nil).order('drop_location')
+    @neighborhoods = Neighborhood.includes(:volunteer).where(:volunteers => { :neighborhood_id => nil }).order('drop_location')
     render :layout => 'layouts/map_print'
   end
 
@@ -54,21 +54,14 @@ class Admin::VolunteersController < ApplicationController
 
   def update
     @v = Volunteer.find(params[:id])
-    @v.neighborhood.team_lead = nil
-    @v.neighborhood.save
     @v.update_attributes!(volunteer_params)
-    @v.neighborhood.team_lead = @v
-    @v.neighborhood.save
+    @v.save
 
     redirect_to admin_volunteers_path
   end
 
   def destroy
     v = Volunteer.find(params[:id])
-    if v.neighborhood.team_lead = v
-      v.neighborhood.team_lead = nil
-      v.neighborhood.save
-    end
     v.delete
     redirect_to admin_volunteers_path
   end

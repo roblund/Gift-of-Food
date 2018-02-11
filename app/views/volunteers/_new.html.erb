@@ -36,27 +36,27 @@
 
           <div id="region_1" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_1", "Region 1 neighborhoods:" %></div>
-            <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 1').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_1", disabled: true} %>
+            <%= v.select :neighborhood_id, options_for_select(Neighborhood.includes(:volunteer).where(:volunteers => { :neighborhood_id => nil }, :neighborhoods => { :region => 1 }).order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_1", disabled: true} %>
           </div>
 
           <div id="region_2" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_2", "Region 2 neighborhoods:" %></div>
-            <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 2').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_2", disabled: true} %>
+            <%= v.select :neighborhood_id, options_for_select(Neighborhood.includes(:volunteer).where(:volunteers => { :neighborhood_id => nil }, :neighborhoods => { :region => 2 }).order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_2", disabled: true} %>
           </div>
 
           <div id="region_3" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_3", "Region 3 neighborhoods:" %></div>
-            <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 3').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_3", disabled: true} %>
+            <%= v.select :neighborhood_id, options_for_select(Neighborhood.includes(:volunteer).where(:volunteers => { :neighborhood_id => nil }, :neighborhoods => { :region => 3 }).order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_3", disabled: true} %>
           </div>
 
           <div id="region_4" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_4", "Region 4 neighborhoods:" %></div>
-            <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 4').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_4", disabled: true} %>
+            <%= v.select :neighborhood_id, options_for_select(Neighborhood.includes(:volunteer).where(:volunteers => { :neighborhood_id => nil }, :neighborhoods => { :region => 4 }).order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_4", disabled: true} %>
           </div>
 
           <div id="region_5" class="selector_field" style="display: none;">
             <div><%=v.label "neighborhood_region_5", "Belgrade neighborhoods:" %></div>
-            <%= v.select :neighborhood_id, options_for_select(Neighborhood.where('volunteer_id IS NULL and region = 5').order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_5", disabled: true} %>
+            <%= v.select :neighborhood_id, options_for_select(Neighborhood.includes(:volunteer).where(:volunteers => { :neighborhood_id => nil }, :neighborhoods => { :region => 5 }).order("name ASC").collect {|p| [ p.name, p.id, {'data-file-id' => p.file_id}]}), {include_blank: true}, {id: "neighborhood_region_5", disabled: true} %>
           </div>
 
         </div>

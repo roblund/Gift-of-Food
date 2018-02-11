@@ -1,3 +1,3 @@
 class Neighborhood < ActiveRecord::Base
-  has_many :volunteers
+  has_one :volunteer
 end

@@ -1,5 +1,5 @@
 # header row
-csv << ["Gift of Food Volunteers"]
+csv << ["Spring For Food Volunteers"]
 csv << [] # gap between header and data for visibility
 
 # header-row for the data
@@ -7,36 +7,37 @@ csv << ["Last Name","First Name","Email","Company","Phone","Is Mobile?","Zip","S
 
 row_data = [] # for scoping
 Neighborhood.all.each do |n|
-  if !n.team_lead.nil?
-    row_data = [
-                 n.team_lead.last_name,
-                 n.team_lead.first_name,
-                 n.team_lead.email,
-                 n.team_lead.company,
-                 n.team_lead.phone.to_s,
-                 n.team_lead.is_mobile,
-                 n.team_lead.zip,
-                 n.team_lead.created_at.strftime('%m-%d-%Y %H:%M:%S'),
-                 n.name,
-                 locations[n.drop_location][0],
-                 "http://springforfood.com/volunteers/maps?neighborhood=#{n.id}"
-               ]
-  else
-    row_data = [
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
-                 '',
-                 n.name,
-                 locations[n.drop_location][0],
-                 "http://springforfood.com/volunteers/maps?neighborhood=#{n.id}"
-               ]
-  end
-  # and don't forget to add the row to the csv
-  csv << row_data.dup # it breaks if you don't dup
+    if !n.volunteer.nil?
+        row_data = [
+                     n.volunteer.last_name,
+                     n.volunteer.first_name,
+                     n.volunteer.email,
+                     n.volunteer.company,
+                     n.volunteer.phone.to_s,
+                     n.volunteer.is_mobile,
+                     n.volunteer.zip,
+                     n.volunteer.created_at.strftime('%m-%d-%Y %H:%M:%S'),
+                     n.name,
+                     locations[n.drop_location][0],
+                     "http://springforfood.com/volunteers/maps?neighborhood=#{n.id}"
+                   ]
+    else
+        row_data = [
+                     '',
+                     '',
+                     '',
+                     '',
+                     '',
+                     '',
+                     '',
+                     '',
+                     n.name,
+                     locations[n.drop_location][0],
+                     "http://springforfood.com/volunteers/maps?neighborhood=#{n.id}"
+                   ]
+    end
+
+    # and don't forget to add the row to the csv
+    csv << row_data.dup # it breaks if you don't dup
 end
 csv << [] # gap for visbility
