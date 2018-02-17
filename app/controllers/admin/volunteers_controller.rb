@@ -9,7 +9,7 @@ class Admin::VolunteersController < ApplicationController
 
   @@locations = [
     ["All", 0],
-    ["Bogert Park", 1],
+    ["Heeb's", 1],
     ["Smith's", 2],
     ["Town and Country - 11th", 3],
     ["Rosauer's", 4],
