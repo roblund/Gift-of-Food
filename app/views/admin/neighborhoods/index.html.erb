@@ -1,0 +1,22 @@
+<div class="columns">
+  <div class="column">
+    <h1>Neighborhoods</h1>
+    <%=link_to "Create Neighborhood", new_admin_neighborhood_path, :class => 'button is-primary' %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Drop Location</th>
+        </tr>
+      </thead>
+      <% @neighborhoods.each do |n| %>
+        <tr>
+          <td><%=n.name %></td>
+          <td><%=n.region %></td>
+          <td><%=n.drop_location %></td>
+        </tr>
+      <% end %>
+      </ul>
+  </div>
+</div>

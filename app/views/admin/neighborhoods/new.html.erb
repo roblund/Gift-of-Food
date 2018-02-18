@@ -1,0 +1,8 @@
+<div class="columns">
+  <div class="column">
+  <h1>New Volunteer</h1>
+  <%=form_for([:admin, Neighborhood.new]) do |n| %>
+    <%=render :partial => 'form', :locals => {:n => n} %>
+  <% end %>
+  </div>
+</div>

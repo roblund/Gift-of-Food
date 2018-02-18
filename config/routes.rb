@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get "/volunteers/maps" => "volunteers#maps"
     get "/volunteers/empty_maps" => "volunteers#empty_maps"
     resources :volunteers
+    resources :neighborhoods
   end
 
 end
