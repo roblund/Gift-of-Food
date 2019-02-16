@@ -3,23 +3,23 @@
 }
 h2 {
   font-size: 2em;
-  font-weight:bold;
-  padding:5px 0;
+  font-weight: bold;
+  padding: 5px 0;
   margin: 1.5em 0 1em 0;
 }
 h3 {
   font-size: 1.4em;
   font-weight: bold;
-  padding:5px 0;
-  margin:0;
-  line-height:1.3em;
+  padding: 5px 0;
+  margin: 0;
+  line-height: 1.3em;
 
   &.facebook-link {
     padding-bottom: 1em;
   }
 }
 p {
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 ul {
   margin: 0;
@@ -31,40 +31,43 @@ ul {
   }
 }
 ol {
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 
   li {
     margin-left: 18px;
   }
 }
 #event_info {
-  list-style:none;
-  margin-top:25px;
-  padding:5px;
+  list-style: none;
+  margin-top: 25px;
+  padding: 5px;
 
   li {
-    font-size:1.3em;
+    font-size: 1.3em;
 
     span {
-      margin-right:10px;
-      font-size:1.5em;
-      font-weight:bold;
-      display:inline-block;
+      margin-right: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      display: inline-block;
     }
   }
+}
+.what-description {
+  font-size: 1.4em;
 }
 .main_image_area {
   text-align: center;
 
   .main_event_photo {
-    border:1px solid #000000;
+    border: 1px solid #000000;
   }
 }
 .event_photos {
   margin-bottom: 2em;
 
   .event_photo {
-    border:1px solid #000000;
+    border: 1px solid #000000;
   }
 }
 .form_field {
@@ -75,54 +78,54 @@ ol {
   }
 }
 .sponsor_image {
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 .non-logo {
-  text-align:center;
-  margin-top:20px;
-  font-family:Georgia;
-  font-weight:bold;
+  text-align: center;
+  margin-top: 20px;
+  font-family: Georgia;
+  font-weight: bold;
 }
 .error_message {
-  font-weight:bold;
-  margin:0 0 10px 100px;
-  color:#ff0000;
+  font-weight: bold;
+  margin: 0 0 10px 100px;
+  color: #ff0000;
 }
 .errors_list {
-  margin-bottom:20px;
-  color:#851C16;
+  margin-bottom: 20px;
+  color: #851c16;
 }
 .donate_button {
   margin-top: 1em;
-  text-align:center;
+  text-align: center;
 }
 .donate_link {
-  font-weight:bold;
-  font-size:1.6em;
+  font-weight: bold;
+  font-size: 1.6em;
 }
 .donate {
-  text-align:center;
+  text-align: center;
 
   a.donate {
-    border:none;
-    display:block;
-    background: #51ACC1;
+    border: none;
+    display: block;
+    background: #51acc1;
     padding: 16px 0;
-    margin:10px 0 20px 0;
-    width:100%;
+    margin: 10px 0 20px 0;
+    width: 100%;
     border-radius: 6px;
     color: white;
     font-size: 17px;
     font-family: Helvetica, Arial, Sans-Serif;
     text-decoration: none;
     vertical-align: middle;
-    cursor:pointer;
+    cursor: pointer;
   }
   a.donate:hover {
-    background: #3A828E;
+    background: #3a828e;
   }
   a.donate:active {
-    background: #3A828E;
+    background: #3a828e;
   }
 }
 .food_bank_logo_area {

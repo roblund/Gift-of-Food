@@ -5,10 +5,10 @@
 
   <div class="column">
     <ul id="event_info">
-      <li><span>When:</span>April 7th, 2018</li>
-      <li><span>Time:</span>10am - 1pm</li>
-      <li><span>Where:</span>Bozeman and Belgrade, Montana</li>
-      <li><span>Goal:</span>125 volunteer teams to collect food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
+      <li><span>When:</span>April 6th, 2019</li>
+      <li><span>Time:</span>10am - 3pm</li>
+      <li><span>Where:</span>Grocery stores around Bozeman and Belgrade, Montana</li>
+      <li><span>Goal:</span>Collect food for the <%= link_to "Gallatin Valley Food Bank", "http://www.gallatinvalleyfoodbank.org", :target => "_blank" %></li>
     </ul>
   </div>
 </div>
@@ -20,12 +20,16 @@
 </div>
 
 <div class="columns">
-  <div class="column is-three-fifths is-offset-one-fifth">
-    <h2>Come and join us!</h2>
+  <div class="column is-8 is-offset-2">
+    <h2>What Can You Do?</h2>
     <div class="prepend-2 span-20 append-2 last">
-      <p>Invite your family and friends to join you on a pleasant Spring day of giving back to your community. Your contribution will go far to support the over 1,200 local families that receive emergency food boxes each month.</p>
+      <p class="what-description">A team of volunteers will be on hand to help load your items between 10 &amp; 3. Food donations can be made at: Albertsons, Community Co-op, Heeb’s, Rosauers, Safeway, Smiths, Town &amp; Country Foods, Walmart</p>
       <h3 class="facebook-link"><a href="https://www.facebook.com/springforfood">Join Us On Facebook</a></h3>
     </div>
+
+    <h3>Monetary Donation:</h3>
+    <p class="what-description">If you would like to donate some money towards this year's food drive, you can do so through the Gallatin Valley Food Bank's secure website. You can also join in on the fun and create your own fundraising page or a team page! Follow the link and click the green "become a fundraiser" button.</p>
+    <p class="donate_button"><%= link_to(image_tag('donate.jpg', alt: "Donate Now", width: 250), 'https://gallatinvalleyfoodbank.org/#donate', :class => "donate_link") %></p>
   </div>
 </div>
 
@@ -51,39 +55,7 @@
 </div>
 
 <div class="columns">
-  <div class="column is-three-fifths is-offset-one-fifth">
-    <h2>Volunteer</h2>
-    <div class="prepend-2 span-20 append-2 last">
-      <h3><%=@volCount%>/125 volunteer teams = <%=number_to_percentage(@volPercent,:precision => 0)%> of our goal</h3><br/>
-      <h4>We need your help!</h4>
-
-      <p>Please fill out the volunteer form below and select a neighborhood close to where you live. Volunteers will be expected to pull together a small group of friends and family to join them in making this event a huge success.</p>
-
-      <h4>What we are asking:</h4>
-
-      <ol>
-        <li><b>Week before the event:</b> Distribute grocery bags to the houses in your selected neighborhood</li>
-        <li><b>Day of the event:</b> Collect bags from all of the houses in your selected neighborhood. Drop the bags at your assigned drop-off location.</li>
-      </ol>
-
-      <p><b>Distributing grocery bags in the week before the event increases the amount of food donated tenfold!</b></p>
-      <p>Grocery bags with attached event flyers can be picked up from Big Sky Western Bank (either the downtown branch or the Huffine/Ferguson branch). Please do NOT attach bags to mailboxes. Instead attached them to door handles or door mats.</p>
-
-      <p>On the day of the event, you and your team should check-in at your assigned drop-off location between 9:30 - 10:30am, receive lanyards for team members, and then set out to collect food from your selected neighborhood. When your team has picked up every last can in your neighborhood, return to the drop-off location to celebrate and fill our semi-trucks full of food!</p>
-
-    </div>
-  </div>
-</div>
-
-<div class="volunteer-hide">
-<%= render 'volunteers/new' %>
-</div>
-
-<div class="columns">
   <div class="column is-8 is-offset-2">
-    <h3>Monetary Donation</h3>
-    <p>If you would like to donate some money towards this year's food drive, you can do so through the Gallatin Valley Food Bank's secure website. You can also join in on the fun and create your own fundraising page or a team page! Follow the link and click the green "become a fundraiser" button.</p>
-    <p class="donate_button"><%= link_to(image_tag('donate.jpg', alt: "Donate Now", width: 250), 'https://www.classy.org/campaign/spring-for-food-2018/c176795', :class => "donate_link") %></p>
   </div>
 </div>
 
